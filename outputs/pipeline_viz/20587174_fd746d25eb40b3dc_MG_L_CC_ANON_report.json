@@ -1,0 +1,56 @@
+{
+  "image": "20587174_fd746d25eb40b3dc_MG_L_CC_ANON.png",
+  "model_auc_cls": 0.7812,
+  "model_auc_seg": 0.9642,
+  "regions_found": 3,
+  "malignant": 0,
+  "benign": 3,
+  "raw_mc_detections": 6,
+  "seg_threshold": 0.45,
+  "cls_threshold": 0.55,
+  "tta_cls": 16,
+  "tta_seg": false,
+  "inference_s": 27.02,
+  "overall_assessment": "BENIGN \u2014 no malignant clusters",
+  "results": [
+    {
+      "region_id": 1,
+      "location": [
+        271,
+        1243,
+        367,
+        1339
+      ],
+      "label": "BENIGN",
+      "probability": 0.3032,
+      "uncertainty": 0.0903,
+      "confidence": "30.3%"
+    },
+    {
+      "region_id": 2,
+      "location": [
+        145,
+        1291,
+        235,
+        1390
+      ],
+      "label": "BENIGN",
+      "probability": 0.3811,
+      "uncertainty": 0.1199,
+      "confidence": "38.1%"
+    },
+    {
+      "region_id": 3,
+      "location": [
+        0,
+        605,
+        109,
+        734
+      ],
+      "label": "BENIGN",
+      "probability": 0.491,
+      "uncertainty": 0.1202,
+      "confidence": "49.1%"
+    }
+  ]
+}

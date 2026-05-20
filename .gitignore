@@ -1,0 +1,94 @@
+# ── Medical data (not redistributable) ──────────────────────────────────────
+data/
+
+# ── Model weights (hosted on Google Drive) ───────────────────────────────────
+checkpoints/
+
+# ── Runtime API results ───────────────────────────────────────────────────────
+api/results/
+
+# ── Evaluation run results (per-image, runtime generated) ────────────────────
+results/
+
+# ── Large/private outputs ────────────────────────────────────────────────────
+outputs/dmid_evaluation/
+outputs/dmid_fix_test/
+outputs/dmid_test_fixed/
+outputs/dmid_test_v2/
+outputs/mias_evaluation/
+outputs/mias_test/
+outputs/inbreast_evaluation/per_image/
+outputs/inbreast_evaluation_ft/
+outputs/inbreast_evaluation_new/
+outputs/inbreast_ensemble/
+outputs/inbreast_ft_*/
+outputs/inbreast_ft_quicktest/
+outputs/inbreast_test/
+outputs/test_single/
+outputs/predictions/
+outputs/notebook_outputs/
+outputs/visual_analysis/
+outputs/xai/
+
+# ── Claude Code session files ─────────────────────────────────────────────────
+.claude/
+
+# ── Scripts (internal utilities, not for public) ─────────────────────────────
+scripts/
+
+# ── Redundant / intermediate notebooks ───────────────────────────────────────
+notebooks/classification_evaluation_complete.ipynb
+notebooks/classification_inference.ipynb
+notebooks/classification_results_report.ipynb
+notebooks/classification_visual_analysis.ipynb
+notebooks/dmid_evaluation_rapport.ipynb
+notebooks/evaluate_classification_1.ipynb
+notebooks/mias_evaluation_rapport.ipynb
+notebooks/inbreast_evaluation_rapport.ipynb
+notebooks/outputs/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── Environment variables ─────────────────────────────────────────────────────
+.env
+.env.*
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# ── Node / Next.js ────────────────────────────────────────────────────────────
+frontend-next/node_modules/
+frontend-next/.next/
+frontend-next/out/
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.log
+*.tmp

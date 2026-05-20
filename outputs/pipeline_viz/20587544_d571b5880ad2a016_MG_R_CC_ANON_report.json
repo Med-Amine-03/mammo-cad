@@ -1,0 +1,173 @@
+{
+  "image": "20587544_d571b5880ad2a016_MG_R_CC_ANON.png",
+  "model_auc_cls": 0.7812,
+  "model_auc_seg": 0.9642,
+  "regions_found": 12,
+  "malignant": 6,
+  "benign": 6,
+  "raw_mc_detections": 160,
+  "seg_threshold": 0.45,
+  "cls_threshold": 0.5,
+  "tta_cls": 16,
+  "tta_seg": false,
+  "inference_s": 36.03,
+  "overall_assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+  "results": [
+    {
+      "region_id": 1,
+      "location": [
+        0,
+        567,
+        529,
+        1600
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.6978,
+      "uncertainty": 0.0814,
+      "confidence": "69.8%"
+    },
+    {
+      "region_id": 2,
+      "location": [
+        0,
+        339,
+        247,
+        611
+      ],
+      "label": "BENIGN",
+      "probability": 0.488,
+      "uncertainty": 0.1112,
+      "confidence": "48.8%"
+    },
+    {
+      "region_id": 3,
+      "location": [
+        0,
+        1844,
+        366,
+        2058
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.6271,
+      "uncertainty": 0.0954,
+      "confidence": "62.7%"
+    },
+    {
+      "region_id": 5,
+      "location": [
+        224,
+        1601,
+        439,
+        1741
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.5172,
+      "uncertainty": 0.1161,
+      "confidence": "51.7%"
+    },
+    {
+      "region_id": 4,
+      "location": [
+        453,
+        1714,
+        544,
+        1816
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.6234,
+      "uncertainty": 0.11,
+      "confidence": "62.3%"
+    },
+    {
+      "region_id": 6,
+      "location": [
+        363,
+        323,
+        467,
+        429
+      ],
+      "label": "BENIGN",
+      "probability": 0.2662,
+      "uncertainty": 0.0702,
+      "confidence": "26.6%"
+    },
+    {
+      "region_id": 7,
+      "location": [
+        465,
+        1248,
+        544,
+        1334
+      ],
+      "label": "BENIGN",
+      "probability": 0.4615,
+      "uncertainty": 0.0909,
+      "confidence": "46.1%"
+    },
+    {
+      "region_id": 8,
+      "location": [
+        105,
+        1771,
+        209,
+        1870
+      ],
+      "label": "BENIGN",
+      "probability": 0.379,
+      "uncertainty": 0.0887,
+      "confidence": "37.9%"
+    },
+    {
+      "region_id": 9,
+      "location": [
+        546,
+        686,
+        637,
+        783
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.5251,
+      "uncertainty": 0.1083,
+      "confidence": "52.5%"
+    },
+    {
+      "region_id": 10,
+      "location": [
+        0,
+        1711,
+        47,
+        1785
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.6116,
+      "uncertainty": 0.1286,
+      "confidence": "61.2%"
+    },
+    {
+      "region_id": 11,
+      "location": [
+        381,
+        736,
+        456,
+        807
+      ],
+      "label": "BENIGN",
+      "probability": 0.496,
+      "uncertainty": 0.0867,
+      "confidence": "49.6%"
+    },
+    {
+      "region_id": 12,
+      "location": [
+        170,
+        290,
+        240,
+        365
+      ],
+      "label": "BENIGN",
+      "probability": 0.2481,
+      "uncertainty": 0.0515,
+      "confidence": "24.8%"
+    }
+  ]
+}

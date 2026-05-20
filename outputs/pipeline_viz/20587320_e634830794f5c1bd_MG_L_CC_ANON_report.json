@@ -1,0 +1,69 @@
+{
+  "image": "20587320_e634830794f5c1bd_MG_L_CC_ANON.png",
+  "model_auc_cls": 0.7812,
+  "model_auc_seg": 0.9642,
+  "regions_found": 4,
+  "malignant": 1,
+  "benign": 3,
+  "raw_mc_detections": 4,
+  "seg_threshold": 0.45,
+  "cls_threshold": 0.55,
+  "tta_cls": 16,
+  "tta_seg": false,
+  "inference_s": 54.06,
+  "overall_assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+  "results": [
+    {
+      "region_id": 1,
+      "location": [
+        1439,
+        1552,
+        1555,
+        1674
+      ],
+      "label": "BENIGN",
+      "probability": 0.2698,
+      "uncertainty": 0.0933,
+      "confidence": "27.0%"
+    },
+    {
+      "region_id": 2,
+      "location": [
+        1307,
+        990,
+        1401,
+        1088
+      ],
+      "label": "BENIGN",
+      "probability": 0.2621,
+      "uncertainty": 0.0612,
+      "confidence": "26.2%"
+    },
+    {
+      "region_id": 3,
+      "location": [
+        773,
+        496,
+        852,
+        574
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.5552,
+      "uncertainty": 0.1006,
+      "confidence": "55.5%"
+    },
+    {
+      "region_id": 4,
+      "location": [
+        103,
+        519,
+        181,
+        598
+      ],
+      "label": "BENIGN",
+      "probability": 0.4093,
+      "uncertainty": 0.1007,
+      "confidence": "40.9%"
+    }
+  ]
+}

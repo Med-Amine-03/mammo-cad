@@ -1,0 +1,84 @@
+======================================================================
+  INbreast DATASET EVALUATION — SUMMARY
+======================================================================
+
+  Dataset: INbreast MC subset (50 images)
+    Benign:    30  (BI-RADS 1/2/3)
+    Malignant: 20  (BI-RADS 4a/4b/4c/5/6)
+
+  Evaluation (50 valid images):
+    Accuracy:    60.0%  (30/50)
+    Sensitivity: 50.0%  (10/20)
+    Specificity: 66.7%  (20/30)
+    PPV:         50.0%  (10/20)
+    NPV:         66.7%  (20/30)
+    F1 Score:    0.5000
+    AUC:         0.4117
+
+  Confusion Matrix:
+                 Pred BEN  Pred MAL
+    True BEN     TN= 20    FP= 10
+    True MAL     FN= 10    TP= 10
+
+  Per BI-RADS:
+    BI-RADS 2    (benin): N= 26  Acc=65.4%  Sens=0.0%  Spec=65.4%
+    BI-RADS 3    (benin): N=  4  Acc=75.0%  Sens=0.0%  Spec=75.0%
+    BI-RADS 4a   (malin): N=  3  Acc=33.3%  Sens=33.3%  Spec=0.0%
+    BI-RADS 4b   (malin): N=  2  Acc=100.0%  Sens=100.0%  Spec=0.0%
+    BI-RADS 5    (malin): N= 15  Acc=46.7%  Sens=46.7%  Spec=0.0%
+
+  Per-image detail:
+    51049628      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=1  MaxP=0.435  [OK]
+    50993616      TRUE=BENIGN     BIRADS=2     PRED=BENIGN (minority mal)      Regions=3  MaxP=0.525  [OK]
+    20588562      TRUE=MALIGNANT  BIRADS=5     PRED=BENIGN (no MC detected)    Regions=0  MaxP=0.000  [WRONG]
+    51049682      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=3  MaxP=0.448  [OK]
+    24058660      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=3  MaxP=0.563  [WRONG]
+    51049462      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=3  MaxP=0.698  [WRONG]
+    26933830      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=2  MaxP=0.464  [WRONG]
+    22579847      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=1  MaxP=0.433  [OK]
+    50999008      TRUE=MALIGNANT  BIRADS=5     PRED=MALIGNANT                  Regions=1  MaxP=0.595  [OK]
+    53580804      TRUE=MALIGNANT  BIRADS=5     PRED=BENIGN (minority mal)      Regions=4  MaxP=0.468  [WRONG]
+    30011824      TRUE=MALIGNANT  BIRADS=4b    PRED=MALIGNANT                  Regions=6  MaxP=0.635  [OK]
+    50997796      TRUE=BENIGN     BIRADS=3     PRED=MALIGNANT                  Regions=7  MaxP=0.675  [WRONG]
+    20587200      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=2  MaxP=0.532  [WRONG]
+    20587372      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=3  MaxP=0.359  [OK]
+    50997769      TRUE=BENIGN     BIRADS=3     PRED=BENIGN (minority mal)      Regions=8  MaxP=0.614  [OK]
+    20587784      TRUE=BENIGN     BIRADS=3     PRED=BENIGN                     Regions=3  MaxP=0.424  [OK]
+    22579730      TRUE=MALIGNANT  BIRADS=5     PRED=MALIGNANT                  Regions=2  MaxP=0.507  [OK]
+    50998467      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=2  MaxP=0.412  [OK]
+    20587492      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=3  MaxP=0.443  [OK]
+    22427840      TRUE=MALIGNANT  BIRADS=5     PRED=MALIGNANT                  Regions=2  MaxP=0.499  [OK]
+    51049134      TRUE=BENIGN     BIRADS=2     PRED=BENIGN (minority mal)      Regions=5  MaxP=0.605  [OK]
+    50999432      TRUE=MALIGNANT  BIRADS=5     PRED=BENIGN (no MC detected)    Regions=0  MaxP=0.000  [WRONG]
+    24055725      TRUE=BENIGN     BIRADS=2     PRED=BENIGN (minority mal)      Regions=5  MaxP=0.575  [OK]
+    20587544      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=2  MaxP=0.575  [WRONG]
+    50998981      TRUE=MALIGNANT  BIRADS=5     PRED=MALIGNANT                  Regions=2  MaxP=0.608  [OK]
+    53582791      TRUE=BENIGN     BIRADS=2     PRED=BENIGN (minority mal)      Regions=20  MaxP=0.693  [OK]
+    24058738      TRUE=MALIGNANT  BIRADS=4a    PRED=BENIGN (minority mal)      Regions=4  MaxP=0.519  [WRONG]
+    53582818      TRUE=BENIGN     BIRADS=2     PRED=BENIGN (minority mal)      Regions=16  MaxP=0.544  [OK]
+    24058686      TRUE=MALIGNANT  BIRADS=4a    PRED=MALIGNANT                  Regions=3  MaxP=0.641  [OK]
+    22614266      TRUE=MALIGNANT  BIRADS=5     PRED=BENIGN                     Regions=1  MaxP=0.399  [WRONG]
+    53580885      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=5  MaxP=0.641  [WRONG]
+    22670855      TRUE=MALIGNANT  BIRADS=5     PRED=BENIGN                     Regions=3  MaxP=0.324  [WRONG]
+    24065761      TRUE=MALIGNANT  BIRADS=5     PRED=MALIGNANT                  Regions=1  MaxP=0.534  [OK]
+    51049053      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=1  MaxP=0.287  [OK]
+    26933801      TRUE=MALIGNANT  BIRADS=4b    PRED=MALIGNANT                  Regions=6  MaxP=0.585  [OK]
+    22614353      TRUE=BENIGN     BIRADS=2     PRED=BENIGN (minority mal)      Regions=3  MaxP=0.461  [OK]
+    50999246      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=1  MaxP=0.353  [OK]
+    22670465      TRUE=MALIGNANT  BIRADS=5     PRED=MALIGNANT                  Regions=7  MaxP=0.601  [OK]
+    24055752      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=11  MaxP=0.726  [WRONG]
+    22580706      TRUE=MALIGNANT  BIRADS=5     PRED=MALIGNANT                  Regions=2  MaxP=0.559  [OK]
+    27829188      TRUE=MALIGNANT  BIRADS=5     PRED=BENIGN (minority mal)      Regions=5  MaxP=0.456  [WRONG]
+    51049489      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=2  MaxP=0.502  [WRONG]
+    22614074      TRUE=MALIGNANT  BIRADS=5     PRED=BENIGN                     Regions=1  MaxP=0.255  [WRONG]
+    50993787      TRUE=BENIGN     BIRADS=2     PRED=BENIGN (minority mal)      Regions=48  MaxP=0.767  [OK]
+    50994589      TRUE=BENIGN     BIRADS=2     PRED=BENIGN (minority mal)      Regions=6  MaxP=0.568  [OK]
+    53586987      TRUE=BENIGN     BIRADS=2     PRED=BENIGN                     Regions=2  MaxP=0.420  [OK]
+    22427705      TRUE=MALIGNANT  BIRADS=5     PRED=BENIGN (minority mal)      Regions=3  MaxP=0.607  [WRONG]
+    50998580      TRUE=BENIGN     BIRADS=2     PRED=MALIGNANT                  Regions=1  MaxP=0.623  [WRONG]
+    22670809      TRUE=MALIGNANT  BIRADS=4a    PRED=BENIGN                     Regions=2  MaxP=0.373  [WRONG]
+    50997742      TRUE=BENIGN     BIRADS=3     PRED=BENIGN (minority mal)      Regions=6  MaxP=0.814  [OK]
+
+  Total time: 35860.3s (717.2s/image)
+  Errors:     0
+======================================================================

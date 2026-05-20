@@ -1,0 +1,12 @@
+SEGMENTATION RESULTS
+IoU         : 0.5694 +/- 0.2870
+Dice        : 0.6654 +/- 0.2955
+Sensitivity : 0.7015 +/- 0.3082
+AUC-ROC     : 0.9642
+
+CLASSIFICATION RESULTS
+AUC-ROC     : 0.4768
+Accuracy    : 0.4176
+Sensitivity : 0.8043
+Specificity : 0.1682
+F1 Score    : 0.5199

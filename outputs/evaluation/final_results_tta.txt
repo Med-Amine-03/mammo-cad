@@ -1,0 +1,12 @@
+SEGMENTATION RESULTS
+IoU         : 0.5694 +/- 0.2870
+Dice        : 0.6654 +/- 0.2955
+Sensitivity : 0.7015 +/- 0.3082
+AUC-ROC     : 0.9642
+
+CLASSIFICATION RESULTS (TTA + Ensemble)
+AUC-ROC     : 0.4617
+Accuracy    : 0.3920  (thr=0.25)
+Sensitivity : 1.0000  (thr=0.25)
+Specificity : 0.0000  (thr=0.25)
+F1 Score    : 0.5633  (thr=0.25)

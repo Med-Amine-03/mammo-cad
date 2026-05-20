@@ -1,0 +1,4162 @@
+{
+  "summary": {
+    "dataset": "INbreast",
+    "n_total": 50,
+    "n_benign": 30,
+    "n_malignant": 20,
+    "correct": 30,
+    "accuracy": 0.6,
+    "sensitivity": 0.5,
+    "specificity": 0.6667,
+    "ppv": 0.5,
+    "npv": 0.6667,
+    "f1": 0.5,
+    "auc": 0.4117,
+    "tp": 10,
+    "tn": 20,
+    "fp": 10,
+    "fn": 10,
+    "errors": 0,
+    "total_time_s": 35860.3,
+    "avg_time_s": 717.2,
+    "per_birads": {
+      "2": {
+        "n": 26,
+        "correct": 17,
+        "accuracy": 0.6538,
+        "sensitivity": 0.0,
+        "specificity": 0.6538,
+        "tp": 0,
+        "tn": 17,
+        "fp": 9,
+        "fn": 0
+      },
+      "3": {
+        "n": 4,
+        "correct": 3,
+        "accuracy": 0.75,
+        "sensitivity": 0.0,
+        "specificity": 0.75,
+        "tp": 0,
+        "tn": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "4a": {
+        "n": 3,
+        "correct": 1,
+        "accuracy": 0.3333,
+        "sensitivity": 0.3333,
+        "specificity": 0.0,
+        "tp": 1,
+        "tn": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "4b": {
+        "n": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "tp": 2,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "5": {
+        "n": 15,
+        "correct": 7,
+        "accuracy": 0.4667,
+        "sensitivity": 0.4667,
+        "specificity": 0.0,
+        "tp": 7,
+        "tn": 0,
+        "fp": 0,
+        "fn": 8
+      }
+    },
+    "cls_tta": 16,
+    "seg_threshold": 0.35,
+    "random_state": 42
+  },
+  "results": [
+    {
+      "image": "51049628_6f64793857feb5d0_MG_L_ML_ANON",
+      "reference": "51049628",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\51049628_6f64793857feb5d0_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 1,
+      "n_malignant": 0,
+      "n_benign": 1,
+      "max_prob": 0.4352,
+      "raw_mc": 1,
+      "inference_ms": 52059.2,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            711,
+            1647,
+            786,
+            1724
+          ],
+          "label": "BENIGN",
+          "probability": 0.4352,
+          "uncertainty": 0.1061,
+          "confidence": "43.5%"
+        }
+      ]
+    },
+    {
+      "image": "50993616_b03f1dd34eb3c55f_MG_L_ML_ANON",
+      "reference": "50993616",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50993616_b03f1dd34eb3c55f_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 3,
+      "n_malignant": 1,
+      "n_benign": 2,
+      "max_prob": 0.525,
+      "raw_mc": 3,
+      "inference_ms": 30514.1,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1245,
+            1705,
+            1338,
+            1804
+          ],
+          "label": "BENIGN",
+          "probability": 0.3093,
+          "uncertainty": 0.0841,
+          "confidence": "30.9%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            1132,
+            1495,
+            1208,
+            1568
+          ],
+          "label": "BENIGN",
+          "probability": 0.4247,
+          "uncertainty": 0.0979,
+          "confidence": "42.5%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            1273,
+            264,
+            1344,
+            339
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.525,
+          "uncertainty": 0.0869,
+          "confidence": "52.5%"
+        }
+      ]
+    },
+    {
+      "image": "20588562_bf1a6aaadb05e3df_MG_L_CC_ANON",
+      "reference": "20588562",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\20588562_bf1a6aaadb05e3df_MG_L_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (no MC detected)",
+      "correct": false,
+      "regions_found": 0,
+      "n_malignant": 0,
+      "n_benign": 0,
+      "max_prob": 0.0,
+      "raw_mc": 0,
+      "inference_ms": 17477.4,
+      "assessment": "NORMAL \u2014 no microcalcification clusters detected",
+      "regions_detail": []
+    },
+    {
+      "image": "51049682_6f64793857feb5d0_MG_L_CC_ANON",
+      "reference": "51049682",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\51049682_6f64793857feb5d0_MG_L_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 3,
+      "n_malignant": 0,
+      "n_benign": 3,
+      "max_prob": 0.4479,
+      "raw_mc": 3,
+      "inference_ms": 19483.2,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            677,
+            648,
+            762,
+            729
+          ],
+          "label": "BENIGN",
+          "probability": 0.311,
+          "uncertainty": 0.1399,
+          "confidence": "31.1%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            374,
+            871,
+            450,
+            947
+          ],
+          "label": "BENIGN",
+          "probability": 0.4479,
+          "uncertainty": 0.0978,
+          "confidence": "44.8%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            790,
+            2326,
+            864,
+            2398
+          ],
+          "label": "BENIGN",
+          "probability": 0.3811,
+          "uncertainty": 0.1064,
+          "confidence": "38.1%"
+        }
+      ]
+    },
+    {
+      "image": "24058660_9e8db9e34d5275ef_MG_R_CC_ANON",
+      "reference": "24058660",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\24058660_9e8db9e34d5275ef_MG_R_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 3,
+      "n_malignant": 2,
+      "n_benign": 1,
+      "max_prob": 0.5631,
+      "raw_mc": 3,
+      "inference_ms": 28301.5,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1746,
+            992,
+            1821,
+            1068
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5631,
+          "uncertainty": 0.0887,
+          "confidence": "56.3%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            849,
+            696,
+            922,
+            770
+          ],
+          "label": "BENIGN",
+          "probability": 0.3047,
+          "uncertainty": 0.0763,
+          "confidence": "30.5%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            1494,
+            816,
+            1567,
+            889
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4757,
+          "uncertainty": 0.0868,
+          "confidence": "47.6%"
+        }
+      ]
+    },
+    {
+      "image": "51049462_6f64793857feb5d0_MG_L_ML_ANON",
+      "reference": "51049462",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\51049462_6f64793857feb5d0_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 3,
+      "n_malignant": 2,
+      "n_benign": 1,
+      "max_prob": 0.6976,
+      "raw_mc": 4,
+      "inference_ms": 22949.4,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            0,
+            2938,
+            100,
+            3051
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6976,
+          "uncertainty": 0.0981,
+          "confidence": "69.8%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            617,
+            1565,
+            690,
+            1640
+          ],
+          "label": "BENIGN",
+          "probability": 0.3404,
+          "uncertainty": 0.0811,
+          "confidence": "34.0%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            736,
+            348,
+            808,
+            422
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.472,
+          "uncertainty": 0.0777,
+          "confidence": "47.2%"
+        }
+      ]
+    },
+    {
+      "image": "26933830_f8bfddc28e8045c0_MG_R_ML_ANON",
+      "reference": "26933830",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\26933830_f8bfddc28e8045c0_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 2,
+      "n_malignant": 1,
+      "n_benign": 1,
+      "max_prob": 0.4644,
+      "raw_mc": 2,
+      "inference_ms": 12289.9,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            455,
+            1202,
+            535,
+            1281
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4644,
+          "uncertainty": 0.1222,
+          "confidence": "46.4%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            259,
+            2098,
+            338,
+            2176
+          ],
+          "label": "BENIGN",
+          "probability": 0.3975,
+          "uncertainty": 0.0579,
+          "confidence": "39.7%"
+        }
+      ]
+    },
+    {
+      "image": "22579847_301f1776aebbf5d2_MG_R_CC_ANON",
+      "reference": "22579847",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22579847_301f1776aebbf5d2_MG_R_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 1,
+      "n_malignant": 0,
+      "n_benign": 1,
+      "max_prob": 0.4328,
+      "raw_mc": 1,
+      "inference_ms": 15853.7,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            44,
+            238,
+            119,
+            312
+          ],
+          "label": "BENIGN",
+          "probability": 0.4328,
+          "uncertainty": 0.0854,
+          "confidence": "43.3%"
+        }
+      ]
+    },
+    {
+      "image": "50999008_a78eba834ef6ee88_MG_R_CC_ANON",
+      "reference": "50999008",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50999008_a78eba834ef6ee88_MG_R_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 1,
+      "n_malignant": 1,
+      "n_benign": 0,
+      "max_prob": 0.5949,
+      "raw_mc": 1,
+      "inference_ms": 6896.5,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            141,
+            481,
+            217,
+            552
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5949,
+          "uncertainty": 0.1084,
+          "confidence": "59.5%"
+        }
+      ]
+    },
+    {
+      "image": "53580804_51bec6477a7898b9_MG_L_ML_ANON",
+      "reference": "53580804",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\53580804_51bec6477a7898b9_MG_L_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": false,
+      "regions_found": 4,
+      "n_malignant": 1,
+      "n_benign": 3,
+      "max_prob": 0.4677,
+      "raw_mc": 4,
+      "inference_ms": 40827.9,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            116,
+            1445,
+            193,
+            1521
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4677,
+          "uncertainty": 0.111,
+          "confidence": "46.8%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            256,
+            937,
+            331,
+            1013
+          ],
+          "label": "BENIGN",
+          "probability": 0.254,
+          "uncertainty": 0.0657,
+          "confidence": "25.4%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            0,
+            884,
+            51,
+            958
+          ],
+          "label": "BENIGN",
+          "probability": 0.4425,
+          "uncertainty": 0.1208,
+          "confidence": "44.2%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            609,
+            2941,
+            684,
+            3017
+          ],
+          "label": "BENIGN",
+          "probability": 0.3316,
+          "uncertainty": 0.0744,
+          "confidence": "33.2%"
+        }
+      ]
+    },
+    {
+      "image": "30011824_4f20c1285d8f0b1f_MG_L_CC_ANON",
+      "reference": "30011824",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\30011824_4f20c1285d8f0b1f_MG_L_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "4b",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 6,
+      "n_malignant": 5,
+      "n_benign": 1,
+      "max_prob": 0.635,
+      "raw_mc": 15,
+      "inference_ms": 64816.7,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            185,
+            445,
+            332,
+            691
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5233,
+          "uncertainty": 0.104,
+          "confidence": "52.3%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            152,
+            707,
+            229,
+            785
+          ],
+          "label": "BENIGN",
+          "probability": 0.2306,
+          "uncertainty": 0.0852,
+          "confidence": "23.1%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            128,
+            605,
+            205,
+            676
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.635,
+          "uncertainty": 0.0992,
+          "confidence": "63.5%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            22,
+            532,
+            96,
+            607
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5613,
+          "uncertainty": 0.1451,
+          "confidence": "56.1%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            322,
+            532,
+            394,
+            606
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5706,
+          "uncertainty": 0.1186,
+          "confidence": "57.1%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            259,
+            309,
+            331,
+            382
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4893,
+          "uncertainty": 0.0848,
+          "confidence": "48.9%"
+        }
+      ]
+    },
+    {
+      "image": "50997796_cbb6c98a81e69eeb_MG_L_CC_ANON",
+      "reference": "50997796",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50997796_cbb6c98a81e69eeb_MG_L_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "3",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 7,
+      "n_malignant": 4,
+      "n_benign": 3,
+      "max_prob": 0.675,
+      "raw_mc": 8,
+      "inference_ms": 65767.8,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1073,
+            992,
+            1167,
+            1086
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5182,
+          "uncertainty": 0.1054,
+          "confidence": "51.8%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            1025,
+            603,
+            1104,
+            681
+          ],
+          "label": "BENIGN",
+          "probability": 0.2713,
+          "uncertainty": 0.0727,
+          "confidence": "27.1%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            929,
+            2436,
+            1006,
+            2513
+          ],
+          "label": "BENIGN",
+          "probability": 0.202,
+          "uncertainty": 0.0778,
+          "confidence": "20.2%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            356,
+            2882,
+            433,
+            2958
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6169,
+          "uncertainty": 0.088,
+          "confidence": "61.7%"
+        },
+        {
+          "region_id": 7,
+          "location": [
+            215,
+            2924,
+            328,
+            3028
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5896,
+          "uncertainty": 0.1124,
+          "confidence": "59.0%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            115,
+            2997,
+            192,
+            3070
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.675,
+          "uncertainty": 0.0985,
+          "confidence": "67.5%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            137,
+            2856,
+            212,
+            2930
+          ],
+          "label": "BENIGN",
+          "probability": 0.2871,
+          "uncertainty": 0.0932,
+          "confidence": "28.7%"
+        }
+      ]
+    },
+    {
+      "image": "20587200_fd746d25eb40b3dc_MG_R_ML_ANON",
+      "reference": "20587200",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\20587200_fd746d25eb40b3dc_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 2,
+      "n_malignant": 1,
+      "n_benign": 1,
+      "max_prob": 0.5318,
+      "raw_mc": 2,
+      "inference_ms": 37703.3,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            705,
+            1622,
+            790,
+            1706
+          ],
+          "label": "BENIGN",
+          "probability": 0.3165,
+          "uncertainty": 0.1293,
+          "confidence": "31.7%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            506,
+            1525,
+            582,
+            1600
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5318,
+          "uncertainty": 0.0949,
+          "confidence": "53.2%"
+        }
+      ]
+    },
+    {
+      "image": "20587372_e634830794f5c1bd_MG_L_ML_ANON",
+      "reference": "20587372",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\20587372_e634830794f5c1bd_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 3,
+      "n_malignant": 0,
+      "n_benign": 3,
+      "max_prob": 0.3592,
+      "raw_mc": 3,
+      "inference_ms": 44561.3,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1673,
+            1988,
+            1791,
+            2109
+          ],
+          "label": "BENIGN",
+          "probability": 0.3592,
+          "uncertainty": 0.0962,
+          "confidence": "35.9%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            1512,
+            1683,
+            1603,
+            1781
+          ],
+          "label": "BENIGN",
+          "probability": 0.2724,
+          "uncertainty": 0.1138,
+          "confidence": "27.2%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            714,
+            2756,
+            788,
+            2828
+          ],
+          "label": "BENIGN",
+          "probability": 0.3405,
+          "uncertainty": 0.1016,
+          "confidence": "34.1%"
+        }
+      ]
+    },
+    {
+      "image": "50997769_cbb6c98a81e69eeb_MG_R_ML_ANON",
+      "reference": "50997769",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50997769_cbb6c98a81e69eeb_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "3",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 8,
+      "n_malignant": 2,
+      "n_benign": 6,
+      "max_prob": 0.6137,
+      "raw_mc": 8,
+      "inference_ms": 32339.3,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            652,
+            2794,
+            746,
+            2899
+          ],
+          "label": "BENIGN",
+          "probability": 0.3934,
+          "uncertainty": 0.0934,
+          "confidence": "39.3%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            316,
+            3083,
+            393,
+            3166
+          ],
+          "label": "BENIGN",
+          "probability": 0.3722,
+          "uncertainty": 0.1019,
+          "confidence": "37.2%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            0,
+            3069,
+            48,
+            3145
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5115,
+          "uncertainty": 0.1302,
+          "confidence": "51.2%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            700,
+            2853,
+            776,
+            2930
+          ],
+          "label": "BENIGN",
+          "probability": 0.3661,
+          "uncertainty": 0.0907,
+          "confidence": "36.6%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            1031,
+            928,
+            1106,
+            1003
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6137,
+          "uncertainty": 0.0973,
+          "confidence": "61.4%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            119,
+            2442,
+            192,
+            2516
+          ],
+          "label": "BENIGN",
+          "probability": 0.3629,
+          "uncertainty": 0.0807,
+          "confidence": "36.3%"
+        },
+        {
+          "region_id": 7,
+          "location": [
+            109,
+            2528,
+            181,
+            2601
+          ],
+          "label": "BENIGN",
+          "probability": 0.3676,
+          "uncertainty": 0.0808,
+          "confidence": "36.8%"
+        },
+        {
+          "region_id": 8,
+          "location": [
+            929,
+            1059,
+            1002,
+            1131
+          ],
+          "label": "BENIGN",
+          "probability": 0.4056,
+          "uncertainty": 0.0835,
+          "confidence": "40.6%"
+        }
+      ]
+    },
+    {
+      "image": "20587784_81cd83d2f4d78528_MG_R_ML_ANON",
+      "reference": "20587784",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\20587784_81cd83d2f4d78528_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "3",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 3,
+      "n_malignant": 0,
+      "n_benign": 3,
+      "max_prob": 0.4239,
+      "raw_mc": 3,
+      "inference_ms": 52959.9,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            607,
+            137,
+            686,
+            219
+          ],
+          "label": "BENIGN",
+          "probability": 0.2425,
+          "uncertainty": 0.0886,
+          "confidence": "24.2%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            580,
+            578,
+            655,
+            653
+          ],
+          "label": "BENIGN",
+          "probability": 0.4239,
+          "uncertainty": 0.1201,
+          "confidence": "42.4%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            1244,
+            1712,
+            1318,
+            1786
+          ],
+          "label": "BENIGN",
+          "probability": 0.327,
+          "uncertainty": 0.115,
+          "confidence": "32.7%"
+        }
+      ]
+    },
+    {
+      "image": "22579730_bbd6a3a35438c11b_MG_R_ML_ANON",
+      "reference": "22579730",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22579730_bbd6a3a35438c11b_MG_R_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 2,
+      "n_malignant": 2,
+      "n_benign": 0,
+      "max_prob": 0.5067,
+      "raw_mc": 2,
+      "inference_ms": 34704.5,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            651,
+            1054,
+            724,
+            1129
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4563,
+          "uncertainty": 0.0912,
+          "confidence": "45.6%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            947,
+            1360,
+            1021,
+            1431
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5067,
+          "uncertainty": 0.0944,
+          "confidence": "50.7%"
+        }
+      ]
+    },
+    {
+      "image": "50998467_1f139436acfc5467_MG_L_CC_ANON",
+      "reference": "50998467",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50998467_1f139436acfc5467_MG_L_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 2,
+      "n_malignant": 0,
+      "n_benign": 2,
+      "max_prob": 0.4125,
+      "raw_mc": 2,
+      "inference_ms": 57548.5,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1075,
+            992,
+            1173,
+            1101
+          ],
+          "label": "BENIGN",
+          "probability": 0.1669,
+          "uncertainty": 0.0697,
+          "confidence": "16.7%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            1115,
+            917,
+            1189,
+            990
+          ],
+          "label": "BENIGN",
+          "probability": 0.4125,
+          "uncertainty": 0.1438,
+          "confidence": "41.2%"
+        }
+      ]
+    },
+    {
+      "image": "20587492_d571b5880ad2a016_MG_R_ML_ANON",
+      "reference": "20587492",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\20587492_d571b5880ad2a016_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 3,
+      "n_malignant": 0,
+      "n_benign": 3,
+      "max_prob": 0.4429,
+      "raw_mc": 3,
+      "inference_ms": 30421.7,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            397,
+            1071,
+            478,
+            1147
+          ],
+          "label": "BENIGN",
+          "probability": 0.3577,
+          "uncertainty": 0.1029,
+          "confidence": "35.8%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            280,
+            827,
+            351,
+            903
+          ],
+          "label": "BENIGN",
+          "probability": 0.4429,
+          "uncertainty": 0.091,
+          "confidence": "44.3%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            494,
+            831,
+            568,
+            902
+          ],
+          "label": "BENIGN",
+          "probability": 0.3982,
+          "uncertainty": 0.0981,
+          "confidence": "39.8%"
+        }
+      ]
+    },
+    {
+      "image": "22427840_bbd6a3a35438c11b_MG_R_CC_ANON",
+      "reference": "22427840",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22427840_bbd6a3a35438c11b_MG_R_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 2,
+      "n_malignant": 2,
+      "n_benign": 0,
+      "max_prob": 0.4988,
+      "raw_mc": 2,
+      "inference_ms": 31222.0,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            238,
+            633,
+            313,
+            708
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4988,
+          "uncertainty": 0.0867,
+          "confidence": "49.9%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            329,
+            751,
+            404,
+            825
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4508,
+          "uncertainty": 0.0862,
+          "confidence": "45.1%"
+        }
+      ]
+    },
+    {
+      "image": "51049134_8c105bb715bf1c3c_MG_R_CC_ANON",
+      "reference": "51049134",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\51049134_8c105bb715bf1c3c_MG_R_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 5,
+      "n_malignant": 2,
+      "n_benign": 3,
+      "max_prob": 0.6048,
+      "raw_mc": 5,
+      "inference_ms": 77130.7,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            860,
+            1828,
+            941,
+            1909
+          ],
+          "label": "BENIGN",
+          "probability": 0.4249,
+          "uncertainty": 0.0836,
+          "confidence": "42.5%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            595,
+            901,
+            672,
+            978
+          ],
+          "label": "BENIGN",
+          "probability": 0.3467,
+          "uncertainty": 0.1309,
+          "confidence": "34.7%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            908,
+            1002,
+            982,
+            1077
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6048,
+          "uncertainty": 0.1087,
+          "confidence": "60.5%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            1102,
+            2024,
+            1173,
+            2100
+          ],
+          "label": "BENIGN",
+          "probability": 0.4429,
+          "uncertainty": 0.0897,
+          "confidence": "44.3%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            914,
+            1541,
+            987,
+            1614
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4731,
+          "uncertainty": 0.0754,
+          "confidence": "47.3%"
+        }
+      ]
+    },
+    {
+      "image": "50999432_f62fbf38fb208316_MG_L_ML_ANON",
+      "reference": "50999432",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50999432_f62fbf38fb208316_MG_L_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (no MC detected)",
+      "correct": false,
+      "regions_found": 0,
+      "n_malignant": 0,
+      "n_benign": 0,
+      "max_prob": 0.0,
+      "raw_mc": 0,
+      "inference_ms": 63514.7,
+      "assessment": "NORMAL \u2014 no microcalcification clusters detected",
+      "regions_detail": []
+    },
+    {
+      "image": "24055725_f0f1a133837b5137_MG_L_ML_ANON",
+      "reference": "24055725",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\24055725_f0f1a133837b5137_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 5,
+      "n_malignant": 2,
+      "n_benign": 3,
+      "max_prob": 0.575,
+      "raw_mc": 6,
+      "inference_ms": 52862.8,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            783,
+            685,
+            868,
+            764
+          ],
+          "label": "BENIGN",
+          "probability": 0.3403,
+          "uncertainty": 0.0885,
+          "confidence": "34.0%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            613,
+            1471,
+            713,
+            1546
+          ],
+          "label": "BENIGN",
+          "probability": 0.4235,
+          "uncertainty": 0.0885,
+          "confidence": "42.3%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            986,
+            1859,
+            1062,
+            1931
+          ],
+          "label": "BENIGN",
+          "probability": 0.3812,
+          "uncertainty": 0.0977,
+          "confidence": "38.1%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            1062,
+            1294,
+            1137,
+            1366
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.575,
+          "uncertainty": 0.093,
+          "confidence": "57.5%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            966,
+            1247,
+            1042,
+            1318
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5021,
+          "uncertainty": 0.0879,
+          "confidence": "50.2%"
+        }
+      ]
+    },
+    {
+      "image": "20587544_d571b5880ad2a016_MG_R_CC_ANON",
+      "reference": "20587544",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\20587544_d571b5880ad2a016_MG_R_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 2,
+      "n_malignant": 2,
+      "n_benign": 0,
+      "max_prob": 0.5748,
+      "raw_mc": 2,
+      "inference_ms": 28647.9,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            59,
+            581,
+            135,
+            655
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5748,
+          "uncertainty": 0.1154,
+          "confidence": "57.5%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            0,
+            591,
+            41,
+            663
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5318,
+          "uncertainty": 0.1492,
+          "confidence": "53.2%"
+        }
+      ]
+    },
+    {
+      "image": "50998981_a78eba834ef6ee88_MG_R_ML_ANON",
+      "reference": "50998981",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50998981_a78eba834ef6ee88_MG_R_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 2,
+      "n_malignant": 2,
+      "n_benign": 0,
+      "max_prob": 0.6078,
+      "raw_mc": 2,
+      "inference_ms": 16899.3,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            234,
+            231,
+            308,
+            306
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4523,
+          "uncertainty": 0.0921,
+          "confidence": "45.2%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            286,
+            51,
+            363,
+            131
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6078,
+          "uncertainty": 0.1247,
+          "confidence": "60.8%"
+        }
+      ]
+    },
+    {
+      "image": "53582791_465aa5ec1b59efc6_MG_L_CC_ANON",
+      "reference": "53582791",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\53582791_465aa5ec1b59efc6_MG_L_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 20,
+      "n_malignant": 7,
+      "n_benign": 13,
+      "max_prob": 0.6926,
+      "raw_mc": 58,
+      "inference_ms": 65508.1,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            175,
+            622,
+            471,
+            953
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5589,
+          "uncertainty": 0.1008,
+          "confidence": "55.9%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            25,
+            906,
+            368,
+            1172
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5873,
+          "uncertainty": 0.069,
+          "confidence": "58.7%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            135,
+            723,
+            299,
+            878
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5276,
+          "uncertainty": 0.1321,
+          "confidence": "52.8%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            0,
+            921,
+            103,
+            1042
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6926,
+          "uncertainty": 0.1157,
+          "confidence": "69.3%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            526,
+            886,
+            648,
+            1042
+          ],
+          "label": "BENIGN",
+          "probability": 0.3563,
+          "uncertainty": 0.1095,
+          "confidence": "35.6%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            460,
+            785,
+            555,
+            879
+          ],
+          "label": "BENIGN",
+          "probability": 0.202,
+          "uncertainty": 0.0907,
+          "confidence": "20.2%"
+        },
+        {
+          "region_id": 7,
+          "location": [
+            517,
+            1064,
+            630,
+            1161
+          ],
+          "label": "BENIGN",
+          "probability": 0.2078,
+          "uncertainty": 0.0678,
+          "confidence": "20.8%"
+        },
+        {
+          "region_id": 9,
+          "location": [
+            49,
+            860,
+            197,
+            966
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5788,
+          "uncertainty": 0.1317,
+          "confidence": "57.9%"
+        },
+        {
+          "region_id": 8,
+          "location": [
+            175,
+            845,
+            266,
+            935
+          ],
+          "label": "BENIGN",
+          "probability": 0.39,
+          "uncertainty": 0.1427,
+          "confidence": "39.0%"
+        },
+        {
+          "region_id": 13,
+          "location": [
+            478,
+            855,
+            575,
+            951
+          ],
+          "label": "BENIGN",
+          "probability": 0.2396,
+          "uncertainty": 0.0904,
+          "confidence": "24.0%"
+        },
+        {
+          "region_id": 10,
+          "location": [
+            79,
+            1436,
+            159,
+            1519
+          ],
+          "label": "BENIGN",
+          "probability": 0.3255,
+          "uncertainty": 0.1178,
+          "confidence": "32.6%"
+        },
+        {
+          "region_id": 11,
+          "location": [
+            382,
+            1112,
+            462,
+            1193
+          ],
+          "label": "BENIGN",
+          "probability": 0.1846,
+          "uncertainty": 0.0668,
+          "confidence": "18.5%"
+        },
+        {
+          "region_id": 12,
+          "location": [
+            3,
+            1351,
+            82,
+            1429
+          ],
+          "label": "BENIGN",
+          "probability": 0.2718,
+          "uncertainty": 0.1171,
+          "confidence": "27.2%"
+        },
+        {
+          "region_id": 14,
+          "location": [
+            602,
+            755,
+            680,
+            832
+          ],
+          "label": "BENIGN",
+          "probability": 0.3375,
+          "uncertainty": 0.0691,
+          "confidence": "33.7%"
+        },
+        {
+          "region_id": 15,
+          "location": [
+            603,
+            557,
+            690,
+            635
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4916,
+          "uncertainty": 0.1045,
+          "confidence": "49.2%"
+        },
+        {
+          "region_id": 16,
+          "location": [
+            434,
+            1044,
+            515,
+            1126
+          ],
+          "label": "BENIGN",
+          "probability": 0.3669,
+          "uncertainty": 0.1002,
+          "confidence": "36.7%"
+        },
+        {
+          "region_id": 17,
+          "location": [
+            422,
+            725,
+            498,
+            799
+          ],
+          "label": "BENIGN",
+          "probability": 0.3652,
+          "uncertainty": 0.1217,
+          "confidence": "36.5%"
+        },
+        {
+          "region_id": 18,
+          "location": [
+            21,
+            1179,
+            95,
+            1254
+          ],
+          "label": "BENIGN",
+          "probability": 0.1763,
+          "uncertainty": 0.0474,
+          "confidence": "17.6%"
+        },
+        {
+          "region_id": 19,
+          "location": [
+            163,
+            576,
+            236,
+            653
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4589,
+          "uncertainty": 0.1295,
+          "confidence": "45.9%"
+        },
+        {
+          "region_id": 20,
+          "location": [
+            46,
+            779,
+            122,
+            851
+          ],
+          "label": "BENIGN",
+          "probability": 0.3576,
+          "uncertainty": 0.092,
+          "confidence": "35.8%"
+        }
+      ]
+    },
+    {
+      "image": "24058738_9e8db9e34d5275ef_MG_L_ML_ANON",
+      "reference": "24058738",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\24058738_9e8db9e34d5275ef_MG_L_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "4a",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": false,
+      "regions_found": 4,
+      "n_malignant": 1,
+      "n_benign": 3,
+      "max_prob": 0.5189,
+      "raw_mc": 5,
+      "inference_ms": 90990.4,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 2,
+          "location": [
+            448,
+            2257,
+            542,
+            2348
+          ],
+          "label": "BENIGN",
+          "probability": 0.4163,
+          "uncertainty": 0.1269,
+          "confidence": "41.6%"
+        },
+        {
+          "region_id": 1,
+          "location": [
+            1061,
+            2292,
+            1135,
+            2366
+          ],
+          "label": "BENIGN",
+          "probability": 0.3896,
+          "uncertainty": 0.1058,
+          "confidence": "39.0%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            1243,
+            2248,
+            1315,
+            2326
+          ],
+          "label": "BENIGN",
+          "probability": 0.3753,
+          "uncertainty": 0.1034,
+          "confidence": "37.5%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            1331,
+            2378,
+            1404,
+            2450
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5189,
+          "uncertainty": 0.0802,
+          "confidence": "51.9%"
+        }
+      ]
+    },
+    {
+      "image": "53582818_465aa5ec1b59efc6_MG_R_CC_ANON",
+      "reference": "53582818",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\53582818_465aa5ec1b59efc6_MG_R_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 16,
+      "n_malignant": 1,
+      "n_benign": 15,
+      "max_prob": 0.5437,
+      "raw_mc": 16,
+      "inference_ms": 75465.1,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            34,
+            1517,
+            138,
+            1610
+          ],
+          "label": "BENIGN",
+          "probability": 0.2064,
+          "uncertainty": 0.0668,
+          "confidence": "20.6%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            449,
+            1279,
+            539,
+            1372
+          ],
+          "label": "BENIGN",
+          "probability": 0.3498,
+          "uncertainty": 0.1074,
+          "confidence": "35.0%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            452,
+            1702,
+            540,
+            1792
+          ],
+          "label": "BENIGN",
+          "probability": 0.449,
+          "uncertainty": 0.1391,
+          "confidence": "44.9%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            670,
+            1160,
+            756,
+            1245
+          ],
+          "label": "BENIGN",
+          "probability": 0.1841,
+          "uncertainty": 0.0975,
+          "confidence": "18.4%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            408,
+            2080,
+            493,
+            2165
+          ],
+          "label": "BENIGN",
+          "probability": 0.2439,
+          "uncertainty": 0.0764,
+          "confidence": "24.4%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            434,
+            1795,
+            519,
+            1881
+          ],
+          "label": "BENIGN",
+          "probability": 0.3519,
+          "uncertainty": 0.11,
+          "confidence": "35.2%"
+        },
+        {
+          "region_id": 7,
+          "location": [
+            595,
+            1405,
+            678,
+            1492
+          ],
+          "label": "BENIGN",
+          "probability": 0.2046,
+          "uncertainty": 0.0936,
+          "confidence": "20.5%"
+        },
+        {
+          "region_id": 8,
+          "location": [
+            222,
+            2249,
+            304,
+            2332
+          ],
+          "label": "BENIGN",
+          "probability": 0.2498,
+          "uncertainty": 0.0852,
+          "confidence": "25.0%"
+        },
+        {
+          "region_id": 9,
+          "location": [
+            664,
+            1989,
+            746,
+            2070
+          ],
+          "label": "BENIGN",
+          "probability": 0.2908,
+          "uncertainty": 0.0849,
+          "confidence": "29.1%"
+        },
+        {
+          "region_id": 10,
+          "location": [
+            513,
+            2066,
+            594,
+            2149
+          ],
+          "label": "BENIGN",
+          "probability": 0.3614,
+          "uncertainty": 0.077,
+          "confidence": "36.1%"
+        },
+        {
+          "region_id": 11,
+          "location": [
+            234,
+            900,
+            311,
+            980
+          ],
+          "label": "BENIGN",
+          "probability": 0.2056,
+          "uncertainty": 0.0584,
+          "confidence": "20.6%"
+        },
+        {
+          "region_id": 12,
+          "location": [
+            577,
+            2083,
+            657,
+            2159
+          ],
+          "label": "BENIGN",
+          "probability": 0.2754,
+          "uncertainty": 0.088,
+          "confidence": "27.5%"
+        },
+        {
+          "region_id": 13,
+          "location": [
+            362,
+            785,
+            440,
+            861
+          ],
+          "label": "BENIGN",
+          "probability": 0.1753,
+          "uncertainty": 0.0654,
+          "confidence": "17.5%"
+        },
+        {
+          "region_id": 14,
+          "location": [
+            737,
+            1516,
+            813,
+            1594
+          ],
+          "label": "BENIGN",
+          "probability": 0.3833,
+          "uncertainty": 0.1073,
+          "confidence": "38.3%"
+        },
+        {
+          "region_id": 15,
+          "location": [
+            698,
+            1271,
+            779,
+            1344
+          ],
+          "label": "BENIGN",
+          "probability": 0.4453,
+          "uncertainty": 0.0965,
+          "confidence": "44.5%"
+        },
+        {
+          "region_id": 16,
+          "location": [
+            386,
+            717,
+            460,
+            790
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5437,
+          "uncertainty": 0.0772,
+          "confidence": "54.4%"
+        }
+      ]
+    },
+    {
+      "image": "24058686_9e8db9e34d5275ef_MG_L_CC_ANON",
+      "reference": "24058686",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\24058686_9e8db9e34d5275ef_MG_L_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "4a",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 3,
+      "n_malignant": 2,
+      "n_benign": 1,
+      "max_prob": 0.6412,
+      "raw_mc": 4,
+      "inference_ms": 84597.7,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1219,
+            486,
+            1312,
+            574
+          ],
+          "label": "BENIGN",
+          "probability": 0.4285,
+          "uncertainty": 0.1026,
+          "confidence": "42.8%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            474,
+            2700,
+            570,
+            2807
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6113,
+          "uncertainty": 0.1066,
+          "confidence": "61.1%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            1305,
+            1938,
+            1380,
+            2010
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6412,
+          "uncertainty": 0.1007,
+          "confidence": "64.1%"
+        }
+      ]
+    },
+    {
+      "image": "22614266_1e5c3af078f74b05_MG_L_ML_ANON",
+      "reference": "22614266",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22614266_1e5c3af078f74b05_MG_L_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": false,
+      "regions_found": 1,
+      "n_malignant": 0,
+      "n_benign": 1,
+      "max_prob": 0.399,
+      "raw_mc": 1,
+      "inference_ms": 42384.1,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            704,
+            657,
+            787,
+            740
+          ],
+          "label": "BENIGN",
+          "probability": 0.399,
+          "uncertainty": 0.1072,
+          "confidence": "39.9%"
+        }
+      ]
+    },
+    {
+      "image": "53580885_51bec6477a7898b9_MG_R_CC_ANON",
+      "reference": "53580885",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\53580885_51bec6477a7898b9_MG_R_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 5,
+      "n_malignant": 3,
+      "n_benign": 2,
+      "max_prob": 0.641,
+      "raw_mc": 5,
+      "inference_ms": 63820.7,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            910,
+            1329,
+            989,
+            1405
+          ],
+          "label": "BENIGN",
+          "probability": 0.3327,
+          "uncertainty": 0.0964,
+          "confidence": "33.3%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            118,
+            2791,
+            192,
+            2867
+          ],
+          "label": "BENIGN",
+          "probability": 0.3405,
+          "uncertainty": 0.0772,
+          "confidence": "34.0%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            0,
+            2535,
+            40,
+            2610
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4561,
+          "uncertainty": 0.0983,
+          "confidence": "45.6%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            326,
+            2255,
+            399,
+            2328
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5,
+          "uncertainty": 0.1063,
+          "confidence": "50.0%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            55,
+            3267,
+            130,
+            3337
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.641,
+          "uncertainty": 0.131,
+          "confidence": "64.1%"
+        }
+      ]
+    },
+    {
+      "image": "22670855_0b7396cdccacca82_MG_R_ML_ANON",
+      "reference": "22670855",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22670855_0b7396cdccacca82_MG_R_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": false,
+      "regions_found": 3,
+      "n_malignant": 0,
+      "n_benign": 3,
+      "max_prob": 0.3244,
+      "raw_mc": 3,
+      "inference_ms": 62460.0,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            815,
+            1943,
+            956,
+            2076
+          ],
+          "label": "BENIGN",
+          "probability": 0.2287,
+          "uncertainty": 0.0633,
+          "confidence": "22.9%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            555,
+            2228,
+            640,
+            2308
+          ],
+          "label": "BENIGN",
+          "probability": 0.2448,
+          "uncertainty": 0.0887,
+          "confidence": "24.5%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            660,
+            767,
+            731,
+            847
+          ],
+          "label": "BENIGN",
+          "probability": 0.3244,
+          "uncertainty": 0.0753,
+          "confidence": "32.4%"
+        }
+      ]
+    },
+    {
+      "image": "24065761_5291e1aee2bbf5df_MG_R_CC_ANON",
+      "reference": "24065761",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\24065761_5291e1aee2bbf5df_MG_R_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 1,
+      "n_malignant": 1,
+      "n_benign": 0,
+      "max_prob": 0.5345,
+      "raw_mc": 1,
+      "inference_ms": 38805.5,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            119,
+            1004,
+            194,
+            1076
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5345,
+          "uncertainty": 0.088,
+          "confidence": "53.4%"
+        }
+      ]
+    },
+    {
+      "image": "51049053_8c105bb715bf1c3c_MG_L_ML_ANON",
+      "reference": "51049053",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\51049053_8c105bb715bf1c3c_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 1,
+      "n_malignant": 0,
+      "n_benign": 1,
+      "max_prob": 0.2868,
+      "raw_mc": 1,
+      "inference_ms": 80061.5,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            751,
+            2244,
+            855,
+            2355
+          ],
+          "label": "BENIGN",
+          "probability": 0.2868,
+          "uncertainty": 0.1046,
+          "confidence": "28.7%"
+        }
+      ]
+    },
+    {
+      "image": "26933801_f8bfddc28e8045c0_MG_L_CC_ANON",
+      "reference": "26933801",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\26933801_f8bfddc28e8045c0_MG_L_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "4b",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 6,
+      "n_malignant": 5,
+      "n_benign": 1,
+      "max_prob": 0.5853,
+      "raw_mc": 10,
+      "inference_ms": 33435.3,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            99,
+            1116,
+            221,
+            1257
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5194,
+          "uncertainty": 0.0784,
+          "confidence": "51.9%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            135,
+            1027,
+            242,
+            1115
+          ],
+          "label": "BENIGN",
+          "probability": 0.3467,
+          "uncertainty": 0.1446,
+          "confidence": "34.7%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            30,
+            1104,
+            121,
+            1223
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5853,
+          "uncertainty": 0.0616,
+          "confidence": "58.5%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            72,
+            1353,
+            162,
+            1439
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.498,
+          "uncertainty": 0.0722,
+          "confidence": "49.8%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            0,
+            1222,
+            80,
+            1316
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5664,
+          "uncertainty": 0.1016,
+          "confidence": "56.6%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            349,
+            1636,
+            423,
+            1711
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.466,
+          "uncertainty": 0.0794,
+          "confidence": "46.6%"
+        }
+      ]
+    },
+    {
+      "image": "22614353_d065adcb9905b973_MG_R_CC_ANON",
+      "reference": "22614353",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22614353_d065adcb9905b973_MG_R_CC_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 3,
+      "n_malignant": 1,
+      "n_benign": 2,
+      "max_prob": 0.4609,
+      "raw_mc": 4,
+      "inference_ms": 55651.6,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 2,
+          "location": [
+            524,
+            1006,
+            611,
+            1092
+          ],
+          "label": "BENIGN",
+          "probability": 0.4301,
+          "uncertainty": 0.0876,
+          "confidence": "43.0%"
+        },
+        {
+          "region_id": 1,
+          "location": [
+            582,
+            1057,
+            657,
+            1133
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4609,
+          "uncertainty": 0.0914,
+          "confidence": "46.1%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            560,
+            274,
+            635,
+            346
+          ],
+          "label": "BENIGN",
+          "probability": 0.4396,
+          "uncertainty": 0.1096,
+          "confidence": "44.0%"
+        }
+      ]
+    },
+    {
+      "image": "50999246_cb65e8dac169f596_MG_L_ML_ANON",
+      "reference": "50999246",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50999246_cb65e8dac169f596_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 1,
+      "n_malignant": 0,
+      "n_benign": 1,
+      "max_prob": 0.3526,
+      "raw_mc": 1,
+      "inference_ms": 36983.1,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            530,
+            1058,
+            610,
+            1138
+          ],
+          "label": "BENIGN",
+          "probability": 0.3526,
+          "uncertainty": 0.0776,
+          "confidence": "35.3%"
+        }
+      ]
+    },
+    {
+      "image": "22670465_7e677f3d530e41ed_MG_L_CC_ANON",
+      "reference": "22670465",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22670465_7e677f3d530e41ed_MG_L_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 7,
+      "n_malignant": 4,
+      "n_benign": 3,
+      "max_prob": 0.601,
+      "raw_mc": 14,
+      "inference_ms": 47727.6,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            0,
+            2392,
+            113,
+            2487
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.493,
+          "uncertainty": 0.0598,
+          "confidence": "49.3%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            408,
+            950,
+            532,
+            1152
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.601,
+          "uncertainty": 0.1196,
+          "confidence": "60.1%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            434,
+            1752,
+            544,
+            1852
+          ],
+          "label": "BENIGN",
+          "probability": 0.3552,
+          "uncertainty": 0.095,
+          "confidence": "35.5%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            618,
+            1336,
+            706,
+            1459
+          ],
+          "label": "BENIGN",
+          "probability": 0.3672,
+          "uncertainty": 0.0874,
+          "confidence": "36.7%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            275,
+            1324,
+            379,
+            1418
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5272,
+          "uncertainty": 0.0736,
+          "confidence": "52.7%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            813,
+            2131,
+            890,
+            2209
+          ],
+          "label": "BENIGN",
+          "probability": 0.3583,
+          "uncertainty": 0.0601,
+          "confidence": "35.8%"
+        },
+        {
+          "region_id": 7,
+          "location": [
+            381,
+            1450,
+            455,
+            1525
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.453,
+          "uncertainty": 0.1088,
+          "confidence": "45.3%"
+        }
+      ]
+    },
+    {
+      "image": "24055752_f0f1a133837b5137_MG_R_ML_ANON",
+      "reference": "24055752",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\24055752_f0f1a133837b5137_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 11,
+      "n_malignant": 6,
+      "n_benign": 5,
+      "max_prob": 0.726,
+      "raw_mc": 11,
+      "inference_ms": 70819.6,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            0,
+            3210,
+            49,
+            3277
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.726,
+          "uncertainty": 0.1302,
+          "confidence": "72.6%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            35,
+            2038,
+            113,
+            2116
+          ],
+          "label": "BENIGN",
+          "probability": 0.2958,
+          "uncertainty": 0.0704,
+          "confidence": "29.6%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            605,
+            1605,
+            684,
+            1680
+          ],
+          "label": "BENIGN",
+          "probability": 0.4446,
+          "uncertainty": 0.0468,
+          "confidence": "44.5%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            38,
+            36,
+            118,
+            112
+          ],
+          "label": "BENIGN",
+          "probability": 0.4064,
+          "uncertainty": 0.0869,
+          "confidence": "40.6%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            1221,
+            1638,
+            1292,
+            1715
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4912,
+          "uncertainty": 0.1095,
+          "confidence": "49.1%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            1160,
+            2152,
+            1235,
+            2227
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4727,
+          "uncertainty": 0.0859,
+          "confidence": "47.3%"
+        },
+        {
+          "region_id": 7,
+          "location": [
+            1001,
+            2240,
+            1078,
+            2314
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4882,
+          "uncertainty": 0.0914,
+          "confidence": "48.8%"
+        },
+        {
+          "region_id": 8,
+          "location": [
+            103,
+            0,
+            178,
+            38
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5377,
+          "uncertainty": 0.1289,
+          "confidence": "53.8%"
+        },
+        {
+          "region_id": 9,
+          "location": [
+            727,
+            1320,
+            800,
+            1393
+          ],
+          "label": "BENIGN",
+          "probability": 0.3809,
+          "uncertainty": 0.0862,
+          "confidence": "38.1%"
+        },
+        {
+          "region_id": 10,
+          "location": [
+            1123,
+            1789,
+            1197,
+            1863
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4653,
+          "uncertainty": 0.1285,
+          "confidence": "46.5%"
+        },
+        {
+          "region_id": 11,
+          "location": [
+            1248,
+            1816,
+            1320,
+            1891
+          ],
+          "label": "BENIGN",
+          "probability": 0.4305,
+          "uncertainty": 0.0616,
+          "confidence": "43.0%"
+        }
+      ]
+    },
+    {
+      "image": "22580706_fe7d005dcbbfb46d_MG_R_ML_ANON",
+      "reference": "22580706",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22580706_fe7d005dcbbfb46d_MG_R_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": true,
+      "regions_found": 2,
+      "n_malignant": 1,
+      "n_benign": 1,
+      "max_prob": 0.5586,
+      "raw_mc": 2,
+      "inference_ms": 70224.8,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1414,
+            2882,
+            1495,
+            2968
+          ],
+          "label": "BENIGN",
+          "probability": 0.3016,
+          "uncertainty": 0.0823,
+          "confidence": "30.2%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            736,
+            14,
+            812,
+            102
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5586,
+          "uncertainty": 0.1274,
+          "confidence": "55.9%"
+        }
+      ]
+    },
+    {
+      "image": "27829188_fbb55bf7fff48540_MG_R_ML_ANON",
+      "reference": "27829188",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\27829188_fbb55bf7fff48540_MG_R_ML_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": false,
+      "regions_found": 5,
+      "n_malignant": 1,
+      "n_benign": 4,
+      "max_prob": 0.4555,
+      "raw_mc": 6,
+      "inference_ms": 86896.0,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            0,
+            3958,
+            102,
+            4072
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4555,
+          "uncertainty": 0.0958,
+          "confidence": "45.6%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            1328,
+            1436,
+            1412,
+            1521
+          ],
+          "label": "BENIGN",
+          "probability": 0.4313,
+          "uncertainty": 0.0825,
+          "confidence": "43.1%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            1024,
+            2515,
+            1108,
+            2592
+          ],
+          "label": "BENIGN",
+          "probability": 0.3902,
+          "uncertainty": 0.0855,
+          "confidence": "39.0%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            463,
+            1148,
+            542,
+            1235
+          ],
+          "label": "BENIGN",
+          "probability": 0.347,
+          "uncertainty": 0.1071,
+          "confidence": "34.7%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            1438,
+            2526,
+            1516,
+            2607
+          ],
+          "label": "BENIGN",
+          "probability": 0.3819,
+          "uncertainty": 0.0856,
+          "confidence": "38.2%"
+        }
+      ]
+    },
+    {
+      "image": "51049489_6f64793857feb5d0_MG_R_ML_ANON",
+      "reference": "51049489",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\51049489_6f64793857feb5d0_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 2,
+      "n_malignant": 1,
+      "n_benign": 1,
+      "max_prob": 0.5022,
+      "raw_mc": 2,
+      "inference_ms": 48630.4,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            315,
+            1362,
+            434,
+            1475
+          ],
+          "label": "BENIGN",
+          "probability": 0.1491,
+          "uncertainty": 0.0346,
+          "confidence": "14.9%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            396,
+            1306,
+            466,
+            1381
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5022,
+          "uncertainty": 0.0759,
+          "confidence": "50.2%"
+        }
+      ]
+    },
+    {
+      "image": "22614074_6bd24a0a42c19ce1_MG_R_CC_ANON",
+      "reference": "22614074",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22614074_6bd24a0a42c19ce1_MG_R_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": false,
+      "regions_found": 1,
+      "n_malignant": 0,
+      "n_benign": 1,
+      "max_prob": 0.2547,
+      "raw_mc": 1,
+      "inference_ms": 100691.7,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1606,
+            1989,
+            1687,
+            2073
+          ],
+          "label": "BENIGN",
+          "probability": 0.2547,
+          "uncertainty": 0.1059,
+          "confidence": "25.5%"
+        }
+      ]
+    },
+    {
+      "image": "50993787_de5e8d61e501a71b_MG_L_ML_ANON",
+      "reference": "50993787",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50993787_de5e8d61e501a71b_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 48,
+      "n_malignant": 11,
+      "n_benign": 37,
+      "max_prob": 0.7674,
+      "raw_mc": 59,
+      "inference_ms": 103471.5,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            905,
+            1902,
+            1053,
+            2046
+          ],
+          "label": "BENIGN",
+          "probability": 0.4011,
+          "uncertainty": 0.1308,
+          "confidence": "40.1%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            191,
+            1307,
+            346,
+            1429
+          ],
+          "label": "BENIGN",
+          "probability": 0.2201,
+          "uncertainty": 0.1114,
+          "confidence": "22.0%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            658,
+            2109,
+            778,
+            2221
+          ],
+          "label": "BENIGN",
+          "probability": 0.3822,
+          "uncertainty": 0.0825,
+          "confidence": "38.2%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            1013,
+            2061,
+            1133,
+            2185
+          ],
+          "label": "BENIGN",
+          "probability": 0.3972,
+          "uncertainty": 0.1001,
+          "confidence": "39.7%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            725,
+            1295,
+            837,
+            1408
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4908,
+          "uncertainty": 0.1283,
+          "confidence": "49.1%"
+        },
+        {
+          "region_id": 8,
+          "location": [
+            482,
+            2289,
+            613,
+            2401
+          ],
+          "label": "BENIGN",
+          "probability": 0.3996,
+          "uncertainty": 0.1249,
+          "confidence": "40.0%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            558,
+            1599,
+            673,
+            1715
+          ],
+          "label": "BENIGN",
+          "probability": 0.4493,
+          "uncertainty": 0.1046,
+          "confidence": "44.9%"
+        },
+        {
+          "region_id": 7,
+          "location": [
+            133,
+            1480,
+            231,
+            1576
+          ],
+          "label": "BENIGN",
+          "probability": 0.2228,
+          "uncertainty": 0.0748,
+          "confidence": "22.3%"
+        },
+        {
+          "region_id": 12,
+          "location": [
+            545,
+            1699,
+            685,
+            1806
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4768,
+          "uncertainty": 0.0885,
+          "confidence": "47.7%"
+        },
+        {
+          "region_id": 9,
+          "location": [
+            569,
+            2251,
+            661,
+            2349
+          ],
+          "label": "BENIGN",
+          "probability": 0.3822,
+          "uncertainty": 0.1281,
+          "confidence": "38.2%"
+        },
+        {
+          "region_id": 23,
+          "location": [
+            547,
+            2009,
+            706,
+            2110
+          ],
+          "label": "BENIGN",
+          "probability": 0.4095,
+          "uncertainty": 0.1237,
+          "confidence": "41.0%"
+        },
+        {
+          "region_id": 10,
+          "location": [
+            834,
+            1765,
+            926,
+            1858
+          ],
+          "label": "BENIGN",
+          "probability": 0.2517,
+          "uncertainty": 0.062,
+          "confidence": "25.2%"
+        },
+        {
+          "region_id": 11,
+          "location": [
+            35,
+            863,
+            127,
+            953
+          ],
+          "label": "BENIGN",
+          "probability": 0.2479,
+          "uncertainty": 0.0899,
+          "confidence": "24.8%"
+        },
+        {
+          "region_id": 13,
+          "location": [
+            810,
+            2507,
+            899,
+            2598
+          ],
+          "label": "BENIGN",
+          "probability": 0.3332,
+          "uncertainty": 0.0829,
+          "confidence": "33.3%"
+        },
+        {
+          "region_id": 14,
+          "location": [
+            193,
+            2634,
+            282,
+            2723
+          ],
+          "label": "BENIGN",
+          "probability": 0.2253,
+          "uncertainty": 0.0856,
+          "confidence": "22.5%"
+        },
+        {
+          "region_id": 15,
+          "location": [
+            545,
+            1011,
+            638,
+            1095
+          ],
+          "label": "BENIGN",
+          "probability": 0.4015,
+          "uncertainty": 0.1103,
+          "confidence": "40.1%"
+        },
+        {
+          "region_id": 26,
+          "location": [
+            338,
+            1176,
+            440,
+            1299
+          ],
+          "label": "BENIGN",
+          "probability": 0.2585,
+          "uncertainty": 0.0875,
+          "confidence": "25.9%"
+        },
+        {
+          "region_id": 16,
+          "location": [
+            477,
+            1063,
+            563,
+            1149
+          ],
+          "label": "BENIGN",
+          "probability": 0.2828,
+          "uncertainty": 0.0781,
+          "confidence": "28.3%"
+        },
+        {
+          "region_id": 17,
+          "location": [
+            508,
+            1573,
+            593,
+            1661
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4732,
+          "uncertainty": 0.1183,
+          "confidence": "47.3%"
+        },
+        {
+          "region_id": 18,
+          "location": [
+            545,
+            1930,
+            633,
+            2019
+          ],
+          "label": "BENIGN",
+          "probability": 0.3033,
+          "uncertainty": 0.0995,
+          "confidence": "30.3%"
+        },
+        {
+          "region_id": 19,
+          "location": [
+            558,
+            2603,
+            643,
+            2689
+          ],
+          "label": "BENIGN",
+          "probability": 0.2623,
+          "uncertainty": 0.0835,
+          "confidence": "26.2%"
+        },
+        {
+          "region_id": 20,
+          "location": [
+            609,
+            2478,
+            694,
+            2563
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4657,
+          "uncertainty": 0.1245,
+          "confidence": "46.6%"
+        },
+        {
+          "region_id": 21,
+          "location": [
+            876,
+            1867,
+            959,
+            1952
+          ],
+          "label": "BENIGN",
+          "probability": 0.2178,
+          "uncertainty": 0.0639,
+          "confidence": "21.8%"
+        },
+        {
+          "region_id": 22,
+          "location": [
+            160,
+            1201,
+            245,
+            1283
+          ],
+          "label": "BENIGN",
+          "probability": 0.3025,
+          "uncertainty": 0.091,
+          "confidence": "30.2%"
+        },
+        {
+          "region_id": 24,
+          "location": [
+            347,
+            1017,
+            431,
+            1100
+          ],
+          "label": "BENIGN",
+          "probability": 0.2669,
+          "uncertainty": 0.1478,
+          "confidence": "26.7%"
+        },
+        {
+          "region_id": 25,
+          "location": [
+            435,
+            2598,
+            522,
+            2677
+          ],
+          "label": "BENIGN",
+          "probability": 0.27,
+          "uncertainty": 0.0997,
+          "confidence": "27.0%"
+        },
+        {
+          "region_id": 27,
+          "location": [
+            788,
+            1680,
+            871,
+            1767
+          ],
+          "label": "BENIGN",
+          "probability": 0.3664,
+          "uncertainty": 0.1007,
+          "confidence": "36.6%"
+        },
+        {
+          "region_id": 28,
+          "location": [
+            270,
+            2242,
+            352,
+            2322
+          ],
+          "label": "BENIGN",
+          "probability": 0.2241,
+          "uncertainty": 0.0931,
+          "confidence": "22.4%"
+        },
+        {
+          "region_id": 29,
+          "location": [
+            709,
+            1748,
+            788,
+            1831
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5013,
+          "uncertainty": 0.0889,
+          "confidence": "50.1%"
+        },
+        {
+          "region_id": 30,
+          "location": [
+            313,
+            1716,
+            394,
+            1796
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.571,
+          "uncertainty": 0.1308,
+          "confidence": "57.1%"
+        },
+        {
+          "region_id": 44,
+          "location": [
+            393,
+            2030,
+            521,
+            2120
+          ],
+          "label": "BENIGN",
+          "probability": 0.3692,
+          "uncertainty": 0.0941,
+          "confidence": "36.9%"
+        },
+        {
+          "region_id": 31,
+          "location": [
+            972,
+            1824,
+            1051,
+            1904
+          ],
+          "label": "BENIGN",
+          "probability": 0.2854,
+          "uncertainty": 0.1007,
+          "confidence": "28.5%"
+        },
+        {
+          "region_id": 32,
+          "location": [
+            627,
+            2345,
+            706,
+            2426
+          ],
+          "label": "BENIGN",
+          "probability": 0.3928,
+          "uncertainty": 0.1664,
+          "confidence": "39.3%"
+        },
+        {
+          "region_id": 33,
+          "location": [
+            626,
+            1398,
+            702,
+            1484
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5819,
+          "uncertainty": 0.0919,
+          "confidence": "58.2%"
+        },
+        {
+          "region_id": 34,
+          "location": [
+            615,
+            2579,
+            694,
+            2656
+          ],
+          "label": "BENIGN",
+          "probability": 0.4064,
+          "uncertainty": 0.1093,
+          "confidence": "40.6%"
+        },
+        {
+          "region_id": 35,
+          "location": [
+            508,
+            894,
+            586,
+            972
+          ],
+          "label": "BENIGN",
+          "probability": 0.3384,
+          "uncertainty": 0.0977,
+          "confidence": "33.8%"
+        },
+        {
+          "region_id": 36,
+          "location": [
+            480,
+            1399,
+            557,
+            1478
+          ],
+          "label": "BENIGN",
+          "probability": 0.4447,
+          "uncertainty": 0.1539,
+          "confidence": "44.5%"
+        },
+        {
+          "region_id": 37,
+          "location": [
+            33,
+            1500,
+            109,
+            1579
+          ],
+          "label": "BENIGN",
+          "probability": 0.3367,
+          "uncertainty": 0.0924,
+          "confidence": "33.7%"
+        },
+        {
+          "region_id": 38,
+          "location": [
+            1166,
+            2073,
+            1244,
+            2150
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4676,
+          "uncertainty": 0.1431,
+          "confidence": "46.8%"
+        },
+        {
+          "region_id": 39,
+          "location": [
+            536,
+            1494,
+            614,
+            1578
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4754,
+          "uncertainty": 0.1795,
+          "confidence": "47.5%"
+        },
+        {
+          "region_id": 40,
+          "location": [
+            354,
+            1317,
+            431,
+            1394
+          ],
+          "label": "BENIGN",
+          "probability": 0.2961,
+          "uncertainty": 0.1055,
+          "confidence": "29.6%"
+        },
+        {
+          "region_id": 41,
+          "location": [
+            180,
+            2024,
+            257,
+            2101
+          ],
+          "label": "BENIGN",
+          "probability": 0.3943,
+          "uncertainty": 0.1261,
+          "confidence": "39.4%"
+        },
+        {
+          "region_id": 42,
+          "location": [
+            1090,
+            2310,
+            1166,
+            2389
+          ],
+          "label": "BENIGN",
+          "probability": 0.34,
+          "uncertainty": 0.0809,
+          "confidence": "34.0%"
+        },
+        {
+          "region_id": 43,
+          "location": [
+            892,
+            2038,
+            968,
+            2115
+          ],
+          "label": "BENIGN",
+          "probability": 0.3095,
+          "uncertainty": 0.0907,
+          "confidence": "30.9%"
+        },
+        {
+          "region_id": 45,
+          "location": [
+            619,
+            2191,
+            693,
+            2264
+          ],
+          "label": "BENIGN",
+          "probability": 0.3182,
+          "uncertainty": 0.0753,
+          "confidence": "31.8%"
+        },
+        {
+          "region_id": 46,
+          "location": [
+            746,
+            1142,
+            820,
+            1215
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.7674,
+          "uncertainty": 0.0852,
+          "confidence": "76.7%"
+        },
+        {
+          "region_id": 47,
+          "location": [
+            83,
+            1299,
+            160,
+            1372
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.4845,
+          "uncertainty": 0.075,
+          "confidence": "48.5%"
+        },
+        {
+          "region_id": 48,
+          "location": [
+            302,
+            1835,
+            375,
+            1908
+          ],
+          "label": "BENIGN",
+          "probability": 0.3295,
+          "uncertainty": 0.0921,
+          "confidence": "32.9%"
+        }
+      ]
+    },
+    {
+      "image": "50994589_de4c34099d6ef8de_MG_R_ML_ANON",
+      "reference": "50994589",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50994589_de4c34099d6ef8de_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 6,
+      "n_malignant": 1,
+      "n_benign": 5,
+      "max_prob": 0.5675,
+      "raw_mc": 6,
+      "inference_ms": 68321.0,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            852,
+            423,
+            935,
+            508
+          ],
+          "label": "BENIGN",
+          "probability": 0.376,
+          "uncertainty": 0.1143,
+          "confidence": "37.6%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            496,
+            1368,
+            575,
+            1442
+          ],
+          "label": "BENIGN",
+          "probability": 0.2214,
+          "uncertainty": 0.0771,
+          "confidence": "22.1%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            1236,
+            2645,
+            1312,
+            2719
+          ],
+          "label": "BENIGN",
+          "probability": 0.4231,
+          "uncertainty": 0.0997,
+          "confidence": "42.3%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            0,
+            2513,
+            59,
+            2591
+          ],
+          "label": "BENIGN",
+          "probability": 0.3638,
+          "uncertainty": 0.1146,
+          "confidence": "36.4%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            396,
+            1661,
+            469,
+            1735
+          ],
+          "label": "BENIGN",
+          "probability": 0.3581,
+          "uncertainty": 0.1461,
+          "confidence": "35.8%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            1302,
+            2260,
+            1374,
+            2333
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.5675,
+          "uncertainty": 0.0925,
+          "confidence": "56.8%"
+        }
+      ]
+    },
+    {
+      "image": "53586987_809e3f43339f93c6_MG_R_ML_ANON",
+      "reference": "53586987",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\53586987_809e3f43339f93c6_MG_R_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": true,
+      "regions_found": 2,
+      "n_malignant": 0,
+      "n_benign": 2,
+      "max_prob": 0.4198,
+      "raw_mc": 2,
+      "inference_ms": 77966.4,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            636,
+            774,
+            717,
+            856
+          ],
+          "label": "BENIGN",
+          "probability": 0.4198,
+          "uncertainty": 0.1001,
+          "confidence": "42.0%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            525,
+            274,
+            606,
+            352
+          ],
+          "label": "BENIGN",
+          "probability": 0.3793,
+          "uncertainty": 0.0746,
+          "confidence": "37.9%"
+        }
+      ]
+    },
+    {
+      "image": "22427705_d713ef5849f98b6c_MG_L_CC_ANON",
+      "reference": "22427705",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22427705_d713ef5849f98b6c_MG_L_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "5",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": false,
+      "regions_found": 3,
+      "n_malignant": 1,
+      "n_benign": 2,
+      "max_prob": 0.6074,
+      "raw_mc": 3,
+      "inference_ms": 10855157.5,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            1270,
+            1736,
+            1350,
+            1821
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6074,
+          "uncertainty": 0.1006,
+          "confidence": "60.7%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            736,
+            2794,
+            821,
+            2877
+          ],
+          "label": "BENIGN",
+          "probability": 0.3101,
+          "uncertainty": 0.1055,
+          "confidence": "31.0%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            736,
+            466,
+            810,
+            539
+          ],
+          "label": "BENIGN",
+          "probability": 0.434,
+          "uncertainty": 0.098,
+          "confidence": "43.4%"
+        }
+      ]
+    },
+    {
+      "image": "50998580_cd12bc20b3d27d0b_MG_L_ML_ANON",
+      "reference": "50998580",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50998580_cd12bc20b3d27d0b_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "2",
+      "pred_label": 1,
+      "pred_label_str": "MALIGNANT",
+      "correct": false,
+      "regions_found": 1,
+      "n_malignant": 1,
+      "n_benign": 0,
+      "max_prob": 0.6227,
+      "raw_mc": 1,
+      "inference_ms": 22558743.6,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            0,
+            3808,
+            45,
+            3869
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.6227,
+          "uncertainty": 0.3791,
+          "confidence": "62.3%"
+        }
+      ]
+    },
+    {
+      "image": "22670809_0b7396cdccacca82_MG_R_CC_ANON",
+      "reference": "22670809",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\22670809_0b7396cdccacca82_MG_R_CC_ANON.png",
+      "true_label": 1,
+      "true_label_str": "MALIGNANT",
+      "true_label_raw": "malignant",
+      "birads": "4a",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN",
+      "correct": false,
+      "regions_found": 2,
+      "n_malignant": 0,
+      "n_benign": 2,
+      "max_prob": 0.3726,
+      "raw_mc": 2,
+      "inference_ms": 25565.1,
+      "assessment": "BENIGN \u2014 no malignant clusters",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            487,
+            1811,
+            635,
+            1934
+          ],
+          "label": "BENIGN",
+          "probability": 0.1901,
+          "uncertainty": 0.0903,
+          "confidence": "19.0%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            435,
+            1862,
+            514,
+            1946
+          ],
+          "label": "BENIGN",
+          "probability": 0.3726,
+          "uncertainty": 0.118,
+          "confidence": "37.3%"
+        }
+      ]
+    },
+    {
+      "image": "50997742_cbb6c98a81e69eeb_MG_L_ML_ANON",
+      "reference": "50997742",
+      "path": "C:\\project\\mammo-cad\\data\\processed\\inbreast\\AllPng\\50997742_cbb6c98a81e69eeb_MG_L_ML_ANON.png",
+      "true_label": 0,
+      "true_label_str": "BENIGN",
+      "true_label_raw": "benign",
+      "birads": "3",
+      "pred_label": 0,
+      "pred_label_str": "BENIGN (minority mal)",
+      "correct": true,
+      "regions_found": 6,
+      "n_malignant": 1,
+      "n_benign": 5,
+      "max_prob": 0.8142,
+      "raw_mc": 6,
+      "inference_ms": 76639.7,
+      "assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+      "regions_detail": [
+        {
+          "region_id": 1,
+          "location": [
+            0,
+            3808,
+            56,
+            3899
+          ],
+          "label": "MALIGNANT",
+          "probability": 0.8142,
+          "uncertainty": 0.1015,
+          "confidence": "81.4%"
+        },
+        {
+          "region_id": 2,
+          "location": [
+            234,
+            3157,
+            313,
+            3240
+          ],
+          "label": "BENIGN",
+          "probability": 0.2755,
+          "uncertainty": 0.0936,
+          "confidence": "27.5%"
+        },
+        {
+          "region_id": 3,
+          "location": [
+            934,
+            2680,
+            1013,
+            2762
+          ],
+          "label": "BENIGN",
+          "probability": 0.262,
+          "uncertainty": 0.0717,
+          "confidence": "26.2%"
+        },
+        {
+          "region_id": 4,
+          "location": [
+            130,
+            2846,
+            203,
+            2921
+          ],
+          "label": "BENIGN",
+          "probability": 0.3146,
+          "uncertainty": 0.0911,
+          "confidence": "31.5%"
+        },
+        {
+          "region_id": 5,
+          "location": [
+            412,
+            2681,
+            482,
+            2759
+          ],
+          "label": "BENIGN",
+          "probability": 0.3504,
+          "uncertainty": 0.0894,
+          "confidence": "35.0%"
+        },
+        {
+          "region_id": 6,
+          "location": [
+            85,
+            2929,
+            161,
+            3002
+          ],
+          "label": "BENIGN",
+          "probability": 0.4402,
+          "uncertainty": 0.0825,
+          "confidence": "44.0%"
+        }
+      ]
+    }
+  ]
+}

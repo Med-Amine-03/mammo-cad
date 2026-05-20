@@ -1,0 +1,225 @@
+{
+  "image": "20587612_f4b2d377f43ba0bd_MG_R_CC_ANON.png",
+  "model_auc_cls": 0.7812,
+  "model_auc_seg": 0.9642,
+  "regions_found": 16,
+  "malignant": 3,
+  "benign": 13,
+  "raw_mc_detections": 897,
+  "seg_threshold": 0.45,
+  "cls_threshold": 0.5,
+  "tta_cls": 16,
+  "tta_seg": false,
+  "inference_s": 84.89,
+  "overall_assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+  "results": [
+    {
+      "region_id": 1,
+      "location": [
+        0,
+        484,
+        1793,
+        3006
+      ],
+      "label": "BENIGN",
+      "probability": 0.4563,
+      "uncertainty": 0.1113,
+      "confidence": "45.6%"
+    },
+    {
+      "region_id": 2,
+      "location": [
+        0,
+        2662,
+        168,
+        2961
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.5008,
+      "uncertainty": 0.1202,
+      "confidence": "50.1%"
+    },
+    {
+      "region_id": 4,
+      "location": [
+        298,
+        329,
+        540,
+        527
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.5149,
+      "uncertainty": 0.1967,
+      "confidence": "51.5%"
+    },
+    {
+      "region_id": 5,
+      "location": [
+        1197,
+        654,
+        1312,
+        800
+      ],
+      "label": "BENIGN",
+      "probability": 0.4047,
+      "uncertainty": 0.0917,
+      "confidence": "40.5%"
+    },
+    {
+      "region_id": 8,
+      "location": [
+        282,
+        171,
+        572,
+        335
+      ],
+      "label": "BENIGN",
+      "probability": 0.2669,
+      "uncertainty": 0.0706,
+      "confidence": "26.7%"
+    },
+    {
+      "region_id": 3,
+      "location": [
+        1468,
+        2750,
+        1568,
+        2848
+      ],
+      "label": "BENIGN",
+      "probability": 0.3304,
+      "uncertainty": 0.0848,
+      "confidence": "33.0%"
+    },
+    {
+      "region_id": 9,
+      "location": [
+        23,
+        3224,
+        189,
+        3476
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.6,
+      "uncertainty": 0.0684,
+      "confidence": "60.0%"
+    },
+    {
+      "region_id": 6,
+      "location": [
+        1371,
+        1317,
+        1483,
+        1411
+      ],
+      "label": "BENIGN",
+      "probability": 0.3178,
+      "uncertainty": 0.0956,
+      "confidence": "31.8%"
+    },
+    {
+      "region_id": 7,
+      "location": [
+        1747,
+        2236,
+        1824,
+        2336
+      ],
+      "label": "BENIGN",
+      "probability": 0.4165,
+      "uncertainty": 0.1391,
+      "confidence": "41.6%"
+    },
+    {
+      "region_id": 10,
+      "location": [
+        576,
+        3189,
+        662,
+        3262
+      ],
+      "label": "BENIGN",
+      "probability": 0.3697,
+      "uncertainty": 0.085,
+      "confidence": "37.0%"
+    },
+    {
+      "region_id": 11,
+      "location": [
+        680,
+        3139,
+        766,
+        3214
+      ],
+      "label": "BENIGN",
+      "probability": 0.4516,
+      "uncertainty": 0.0819,
+      "confidence": "45.2%"
+    },
+    {
+      "region_id": 12,
+      "location": [
+        556,
+        3046,
+        634,
+        3126
+      ],
+      "label": "BENIGN",
+      "probability": 0.4823,
+      "uncertainty": 0.112,
+      "confidence": "48.2%"
+    },
+    {
+      "region_id": 13,
+      "location": [
+        604,
+        233,
+        682,
+        308
+      ],
+      "label": "BENIGN",
+      "probability": 0.4966,
+      "uncertainty": 0.1461,
+      "confidence": "49.7%"
+    },
+    {
+      "region_id": 14,
+      "location": [
+        447,
+        1636,
+        521,
+        1710
+      ],
+      "label": "BENIGN",
+      "probability": 0.4946,
+      "uncertainty": 0.0877,
+      "confidence": "49.5%"
+    },
+    {
+      "region_id": 15,
+      "location": [
+        1418,
+        1073,
+        1493,
+        1149
+      ],
+      "label": "BENIGN",
+      "probability": 0.4164,
+      "uncertainty": 0.0892,
+      "confidence": "41.6%"
+    },
+    {
+      "region_id": 16,
+      "location": [
+        860,
+        3042,
+        941,
+        3113
+      ],
+      "label": "BENIGN",
+      "probability": 0.417,
+      "uncertainty": 0.094,
+      "confidence": "41.7%"
+    }
+  ]
+}

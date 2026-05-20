@@ -1,0 +1,108 @@
+{
+  "image": "20586934_6c613a14b80a8591_MG_L_CC_ANON.png",
+  "model_auc_cls": 0.7812,
+  "model_auc_seg": 0.9642,
+  "regions_found": 7,
+  "malignant": 1,
+  "benign": 6,
+  "raw_mc_detections": 7,
+  "seg_threshold": 0.45,
+  "cls_threshold": 0.55,
+  "tta_cls": 16,
+  "tta_seg": false,
+  "inference_s": 64.78,
+  "overall_assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+  "results": [
+    {
+      "region_id": 1,
+      "location": [
+        653,
+        2739,
+        728,
+        2823
+      ],
+      "label": "BENIGN",
+      "probability": 0.4323,
+      "uncertainty": 0.0902,
+      "confidence": "43.2%"
+    },
+    {
+      "region_id": 2,
+      "location": [
+        426,
+        2686,
+        505,
+        2764
+      ],
+      "label": "BENIGN",
+      "probability": 0.337,
+      "uncertainty": 0.0862,
+      "confidence": "33.7%"
+    },
+    {
+      "region_id": 3,
+      "location": [
+        646,
+        3030,
+        723,
+        3108
+      ],
+      "label": "BENIGN",
+      "probability": 0.3243,
+      "uncertainty": 0.0993,
+      "confidence": "32.4%"
+    },
+    {
+      "region_id": 4,
+      "location": [
+        124,
+        2032,
+        200,
+        2109
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.6221,
+      "uncertainty": 0.0714,
+      "confidence": "62.2%"
+    },
+    {
+      "region_id": 5,
+      "location": [
+        533,
+        2613,
+        606,
+        2688
+      ],
+      "label": "BENIGN",
+      "probability": 0.3365,
+      "uncertainty": 0.1043,
+      "confidence": "33.7%"
+    },
+    {
+      "region_id": 6,
+      "location": [
+        185,
+        1009,
+        261,
+        1081
+      ],
+      "label": "BENIGN",
+      "probability": 0.4619,
+      "uncertainty": 0.0964,
+      "confidence": "46.2%"
+    },
+    {
+      "region_id": 7,
+      "location": [
+        100,
+        32,
+        175,
+        103
+      ],
+      "label": "BENIGN",
+      "probability": 0.377,
+      "uncertainty": 0.0826,
+      "confidence": "37.7%"
+    }
+  ]
+}

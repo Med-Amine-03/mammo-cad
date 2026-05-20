@@ -1,0 +1,91 @@
+% ═══════════════════════════════════════════════════════════════════
+\subsection{Résultats quantitatifs}
+\label{subsec:ch3-resultats-quantitatifs}
+% ═══════════════════════════════════════════════════════════════════
+
+Le protocole décrit à la section précédente a été appliqué sur la
+partition de test de CBIS-DDSM, composée de \textbf{787~cas} issus de
+\textbf{349~patientes} distinctes (475~bénins, 312~malins). Aucune de
+ces patientes n'apparaît dans les ensembles d'entraînement ou de
+validation, garantissant ainsi l'absence de fuite d'information.
+
+\paragraph{Métriques globales.}
+Le tableau~\ref{tab:ch3-metriques-test} rassemble les indicateurs
+obtenus avec le modèle final (\textit{SWA}, étape~2) et un
+\textit{test-time augmentation} à 16~vues (TTA-16). La
+\textbf{spécificité} atteint 76,2\,\%, ce qui traduit une capacité
+satisfaisante à écarter les lésions bénignes et à limiter le nombre de
+biopsies inutiles. La \textbf{sensibilité} de 63,1\,\% reste en deçà
+du seuil clinique souhaitable~: dans un contexte de dépistage, il est
+préférable de maximiser la détection des cas malins, quitte à accepter
+davantage de faux positifs. Cette limitation est discutée plus bas.
+
+\begin{table}[H]
+    \centering
+    \caption{Performances du classificateur EfficientNet-B3 sur le test
+             CBIS-DDSM (TTA-16, seuil $\tau = 0{,}535$).}
+    \label{tab:ch3-metriques-test}
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Métrique} & \textbf{Valeur} \\
+        \midrule
+        AUC-ROC            & 0,7812 \\
+        AUC-PR             & 0,7183 \\
+        Sensibilité        & 63,1\,\% \\
+        Spécificité        & 76,2\,\% \\
+        Exactitude          & 71,0\,\% \\
+        Score F1            & 0,6334 \\
+        MCC                 & 0,394 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Matrice de confusion.}
+La figure~\ref{fig:ch3-roc-cm} présente, à gauche, la courbe
+\textit{ROC} du modèle avec le point de fonctionnement retenu
+($\tau = 0{,}535$), et à droite la matrice de confusion correspondante.
+Sur les 312~cas malins, le classifieur en identifie correctement
+197~(\textbf{vrais positifs}), tandis que 115~échappent à la détection
+(\textbf{faux négatifs}). Côté bénin, 362~des 475~cas sont correctement
+classés (\textbf{vrais négatifs}), et 113~sont orientés à tort vers une
+investigation complémentaire (\textbf{faux positifs}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/cls_roc_cm_final.png}
+    \caption[Courbe ROC et matrice de confusion du classificateur
+             EfficientNet-B3]{Courbe \textit{ROC}
+             (AUC~=~0,7812) et matrice de confusion
+             ($\tau = 0{,}535$) obtenus sur le test CBIS-DDSM
+             (787~cas, TTA-16). Le point jaune indique le seuil
+             de décision retenu.}
+    \label{fig:ch3-roc-cm}
+\end{figure}
+
+\paragraph{Discussion clinique.}
+En mammographie de dépistage, un \textbf{faux négatif} constitue
+l'erreur la plus coûteuse~: une lésion maligne non détectée retarde le
+diagnostic et peut compromettre le pronostic de la patiente. La
+sensibilité observée (63,1\,\%) indique que le modèle, utilisé seul,
+laisserait passer environ un tiers des cas malins. Ce résultat souligne
+que le système proposé ne peut se substituer au radiologue, mais
+s'inscrit comme un \textbf{outil d'aide à la décision}~: il signale les
+régions suspectes identifiées par la segmentation et fournit une
+probabilité de malignité que le praticien intègre à son analyse globale.
+
+La valeur de l'\textbf{AUC} (0,7812) se situe dans la fourchette
+rapportée par la littérature pour des classifieurs entraînés sur
+CBIS-DDSM, généralement comprise entre 0,75 et
+0,85~\cite{cbisddsm2017, shia2025mammography}. Il convient de noter que
+CBIS-DDSM est un jeu de données particulièrement exigeant~: les
+\textit{patches} sont recadrés à partir de mammographies complètes avec
+des annotations parfois ambiguës, et le déséquilibre modéré entre
+classes (59\,\% de bénins) complique la tâche de discrimination.
+
+Le \textbf{score F1} de 0,6334 et le coefficient de corrélation de
+Matthews (\textbf{MCC}~=~0,394) confirment une performance supérieure au
+hasard, tout en révélant une marge d'amélioration. Parmi les pistes
+envisageables figurent l'augmentation de la taille du jeu
+d'entraînement, l'intégration d'informations contextuelles (vue
+controlatérale, antécédents) ou le recours à des architectures plus
+récentes. Ces perspectives sont développées en conclusion du chapitre.

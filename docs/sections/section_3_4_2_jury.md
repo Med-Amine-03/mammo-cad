@@ -1,0 +1,11 @@
+# Tableau jury — Section 3.4.2 (Résultats quantitatifs)
+
+| Si le jury demande… | Tu réponds… |
+|---|---|
+| **Pourquoi l'AUC n'est « que » 0,78 ?** | CBIS-DDSM est un benchmark exigeant — les annotations proviennent de mammographies complètes avec des cas ambigus. La littérature rapporte des AUC entre 0,75 et 0,85 pour des classifieurs similaires sur ce dataset. Notre résultat est donc dans la norme. |
+| **63 % de sensibilité, c'est faible pour du dépistage ?** | Oui, c'est insuffisant pour un usage autonome. C'est pourquoi le système est conçu comme outil d'aide — le radiologue garde le dernier mot. La sensibilité peut être augmentée en abaissant le seuil (au prix de plus de faux positifs), ce qu'on montre en 3.4.4. |
+| **C'est quoi le MCC et pourquoi le montrer ?** | Le MCC (Matthews Correlation Coefficient) est une métrique qui prend en compte les 4 quadrants de la matrice de confusion. Contrairement à l'accuracy, il n'est pas biaisé par le déséquilibre des classes. Un MCC de 0,394 confirme une corrélation positive entre prédictions et réalité. |
+| **Pourquoi le seuil 0,535 et pas 0,5 ?** | Le seuil 0,535 maximise le score F1 sur l'ensemble de validation. On l'optimise sur la validation (pas le test) pour éviter le surapprentissage du seuil. La différence avec 0,5 est modeste mais mesurable. |
+| **Pourquoi AUC-ROC et AUC-PR ?** | L'AUC-ROC mesure la capacité de discrimination globale. L'AUC-PR (0,7183) est plus informative quand les classes sont déséquilibrées car elle se concentre sur la classe positive (malins). Les deux sont complémentaires. |
+| **115 faux négatifs, c'est grave ?** | En clinique, oui — chaque FN est une lésion maligne non détectée. C'est pourquoi on insiste sur le fait que le système est un outil d'aide, pas un remplacement du radiologue. L'analyse des FN (section 3.5) montre que leur probabilité moyenne est 0,433, loin du seuil — le modèle est confiant mais erroné sur ces cas. |
+| **Qu'est-ce que le TTA-16 ?** | On fait passer chaque image sous 16 transformations différentes (retournements, rotations, changement d'échelle) et on moyenne les probabilités. Ça réduit la variance de prédiction sans ré-entraîner le modèle. Le gain est détaillé en 3.4.3. |

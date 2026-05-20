@@ -1,0 +1,42 @@
+{
+  "image": "..\\data\\processed\\inbreast\\AllPng\\20587148_fd746d25eb40b3dc_MG_R_CC_ANON.png",
+  "clusters_found": 2,
+  "raw_mc_count": 2,
+  "threshold": 0.5,
+  "tta_used": false,
+  "inference_ms": 22107.5,
+  "clusters": [
+    {
+      "cluster_id": 1,
+      "location": [
+        559,
+        1020,
+        643,
+        1104
+      ],
+      "total_area_px": 316,
+      "centroid": [
+        601.0,
+        1062.0
+      ],
+      "width": 84,
+      "height": 84
+    },
+    {
+      "cluster_id": 2,
+      "location": [
+        364,
+        915,
+        438,
+        989
+      ],
+      "total_area_px": 68,
+      "centroid": [
+        401.0,
+        952.0
+      ],
+      "width": 74,
+      "height": 74
+    }
+  ]
+}

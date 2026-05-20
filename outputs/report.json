@@ -1,0 +1,93 @@
+{
+  "image": "data/processed/inbreast/AllPng/20586986_6c613a14b80a8591_MG_L_ML_ANON.png",
+  "regions_found": 6,
+  "threshold": 0.45,
+  "tta_used": false,
+  "inference_ms": 98764.7,
+  "bboxes": [
+    {
+      "region_id": 5,
+      "location": [
+        692,
+        2167,
+        703,
+        2184
+      ],
+      "area_px": 134,
+      "centroid": [
+        697.4,
+        2175.0
+      ]
+    },
+    {
+      "region_id": 4,
+      "location": [
+        505,
+        2011,
+        517,
+        2026
+      ],
+      "area_px": 130,
+      "centroid": [
+        510.2,
+        2018.1
+      ]
+    },
+    {
+      "region_id": 2,
+      "location": [
+        718,
+        1363,
+        729,
+        1375
+      ],
+      "area_px": 103,
+      "centroid": [
+        723.0,
+        1368.5
+      ]
+    },
+    {
+      "region_id": 6,
+      "location": [
+        537,
+        2428,
+        547,
+        2438
+      ],
+      "area_px": 74,
+      "centroid": [
+        541.4,
+        2432.6
+      ]
+    },
+    {
+      "region_id": 1,
+      "location": [
+        314,
+        895,
+        320,
+        907
+      ],
+      "area_px": 59,
+      "centroid": [
+        316.6,
+        900.4
+      ]
+    },
+    {
+      "region_id": 3,
+      "location": [
+        650,
+        2000,
+        657,
+        2009
+      ],
+      "area_px": 51,
+      "centroid": [
+        652.9,
+        2004.2
+      ]
+    }
+  ]
+}

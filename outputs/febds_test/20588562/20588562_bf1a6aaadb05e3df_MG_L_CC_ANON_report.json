@@ -1,0 +1,119 @@
+{
+  "image": "data\\processed\\inbreast\\AllPng\\20588562_bf1a6aaadb05e3df_MG_L_CC_ANON.png",
+  "model_auc_cls": 0.7812,
+  "model_auc_seg": 0.9642,
+  "regions_found": 8,
+  "malignant": 7,
+  "benign": 1,
+  "raw_mc_detections": 0,
+  "seg_threshold": 0.45,
+  "tta_seg": false,
+  "inference_ms": 25321.9,
+  "overall_assessment": "SUSPICIOUS \u2014 malignant cluster(s) detected",
+  "results": [
+    {
+      "region_id": 0,
+      "location": [
+        3,
+        37,
+        50,
+        85
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.746,
+      "uncertainty": 0.0538,
+      "confidence": "74.6%"
+    },
+    {
+      "region_id": 1,
+      "location": [
+        0,
+        49,
+        127,
+        158
+      ],
+      "label": "BENIGN",
+      "probability": 0.4861,
+      "uncertainty": 0.086,
+      "confidence": "48.6%"
+    },
+    {
+      "region_id": 2,
+      "location": [
+        73,
+        71,
+        125,
+        135
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.734,
+      "uncertainty": 0.0703,
+      "confidence": "73.4%"
+    },
+    {
+      "region_id": 3,
+      "location": [
+        152,
+        114,
+        208,
+        179
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.7102,
+      "uncertainty": 0.0576,
+      "confidence": "71.0%"
+    },
+    {
+      "region_id": 4,
+      "location": [
+        194,
+        127,
+        242,
+        191
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.6915,
+      "uncertainty": 0.0956,
+      "confidence": "69.2%"
+    },
+    {
+      "region_id": 5,
+      "location": [
+        169,
+        136,
+        226,
+        184
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.6445,
+      "uncertainty": 0.0465,
+      "confidence": "64.5%"
+    },
+    {
+      "region_id": 6,
+      "location": [
+        269,
+        174,
+        330,
+        235
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.735,
+      "uncertainty": 0.044,
+      "confidence": "73.5%"
+    },
+    {
+      "region_id": 7,
+      "location": [
+        296,
+        179,
+        351,
+        231
+      ],
+      "label": "MALIGNANT",
+      "probability": 0.7502,
+      "uncertainty": 0.013,
+      "confidence": "75.0%"
+    }
+  ]
+}

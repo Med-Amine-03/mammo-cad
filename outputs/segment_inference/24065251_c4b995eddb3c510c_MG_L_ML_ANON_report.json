@@ -1,0 +1,26 @@
+{
+  "image": "..\\data\\processed\\inbreast\\AllPng\\24065251_c4b995eddb3c510c_MG_L_ML_ANON.png",
+  "clusters_found": 1,
+  "raw_mc_count": 15,
+  "threshold": 0.5,
+  "tta_used": false,
+  "inference_ms": 64820.1,
+  "clusters": [
+    {
+      "cluster_id": 1,
+      "location": [
+        742,
+        1232,
+        1025,
+        1490
+      ],
+      "total_area_px": 1181,
+      "centroid": [
+        883.5,
+        1361.0
+      ],
+      "width": 283,
+      "height": 258
+    }
+  ]
+}
