@@ -100,6 +100,87 @@ function KvList({ items }: { items: [string, string][] }) {
 }
 
 
+const CALC_MASS_DATA: { metric: string; calc: string; mass: string; delta: string; better: 'calc' | 'mass' | 'neutral' }[] = [
+  { metric: 'N',           calc: '382',    mass: '405',    delta: '+23',     better: 'neutral' },
+  { metric: 'AUC',         calc: '0.7808', mass: '0.7836', delta: '+0.0028', better: 'mass' },
+  { metric: 'Accuracy',    calc: '70.9%',  mass: '71.1%',  delta: '+0.2%',   better: 'mass' },
+  { metric: 'Sensitivity', calc: '60.6%',  mass: '65.6%',  delta: '+5.0%',   better: 'mass' },
+  { metric: 'Specificity', calc: '78.0%',  mass: '74.6%',  delta: '−3.4%',   better: 'calc' },
+  { metric: 'PPV',         calc: '65.3%',  mass: '62.0%',  delta: '−3.3%',   better: 'calc' },
+  { metric: 'NPV',         calc: '74.4%',  mass: '77.4%',  delta: '+1.0%',   better: 'mass' },
+  { metric: 'F1',          calc: '0.6288', mass: '0.6378', delta: '+0.0090', better: 'mass' },
+  { metric: 'TP',          calc: '94',     mass: '103',    delta: '+9',      better: 'mass' },
+  { metric: 'TN',          calc: '177',    mass: '185',    delta: '+8',      better: 'mass' },
+  { metric: 'FP',          calc: '50',     mass: '63',     delta: '+13',     better: 'calc' },
+  { metric: 'FN',          calc: '61',     mass: '54',     delta: '−7',      better: 'mass' },
+]
+
+function CalcVsMassTable() {
+  const thStyle: React.CSSProperties = { fontSize: 10, fontWeight: 700, padding: '8px 10px', textAlign: 'left', color: 'var(--txt3)', textTransform: 'uppercase', letterSpacing: '0.06em', fontFamily: 'Geist Mono, monospace', borderBottom: '2px solid var(--brd)' }
+  const tdStyle: React.CSSProperties = { fontSize: 12, padding: '6px 10px', borderBottom: '1px solid var(--brd)', fontFamily: 'Geist Mono, monospace', fontWeight: 500 }
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 16, alignItems: 'start' }}>
+      <div style={{ overflowX: 'auto' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <thead>
+            <tr>
+              <th style={thStyle}>Metric</th>
+              <th style={{ ...thStyle, textAlign: 'center' }}>Calc <span style={{ opacity: 0.5 }}>(n=382)</span></th>
+              <th style={{ ...thStyle, textAlign: 'center' }}>Mass <span style={{ opacity: 0.5 }}>(n=405)</span></th>
+              <th style={{ ...thStyle, textAlign: 'center' }}>Δ (M−C)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {CALC_MASS_DATA.map((r, i) => {
+              const isLast = i === CALC_MASS_DATA.length - 1
+              const deltaColor = r.delta.startsWith('+') ? 'var(--ok)' : r.delta.startsWith('−') ? 'var(--bad)' : 'var(--txt3)'
+              return (
+                <tr key={r.metric} style={{ background: i % 2 === 0 ? 'transparent' : 'color-mix(in oklab, var(--brd) 25%, transparent)' }}>
+                  <td style={{ ...tdStyle, color: 'var(--txt2)', fontWeight: 600, borderBottom: isLast ? 'none' : tdStyle.borderBottom }}>{r.metric}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center', color: r.better === 'calc' ? 'var(--ok)' : 'var(--txt)', borderBottom: isLast ? 'none' : tdStyle.borderBottom }}>{r.calc}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center', color: r.better === 'mass' ? 'var(--ok)' : 'var(--txt)', borderBottom: isLast ? 'none' : tdStyle.borderBottom }}>{r.mass}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center', color: deltaColor, fontWeight: 600, borderBottom: isLast ? 'none' : tdStyle.borderBottom }}>{r.delta}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 180 }}>
+        {[
+          { label: 'AUC', calc: 0.7808, mass: 0.7836 },
+          { label: 'Accuracy', calc: 0.709, mass: 0.711 },
+          { label: 'Sensitivity', calc: 0.606, mass: 0.656 },
+          { label: 'Specificity', calc: 0.780, mass: 0.746 },
+          { label: 'F1', calc: 0.6288, mass: 0.6378 },
+        ].map(m => {
+          const max = Math.max(m.calc, m.mass, 1)
+          return (
+            <div key={m.label}>
+              <div style={{ fontSize: 10, color: 'var(--txt3)', marginBottom: 3, fontFamily: 'Geist Mono, monospace' }}>{m.label}</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2 }}>
+                <div style={{ width: 32, fontSize: 9, color: '#60a5fa', fontFamily: 'Geist Mono, monospace', textAlign: 'right' }}>Calc</div>
+                <div style={{ flex: 1, height: 10, background: 'var(--brd)', borderRadius: 3, overflow: 'hidden' }}>
+                  <div style={{ width: `${(m.calc / max) * 100}%`, height: '100%', background: '#60a5fa', borderRadius: 3 }} />
+                </div>
+                <div style={{ width: 38, fontSize: 9, fontFamily: 'Geist Mono, monospace', color: 'var(--txt2)', textAlign: 'right' }}>{(m.calc * 100).toFixed(1)}%</div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <div style={{ width: 32, fontSize: 9, color: '#f97316', fontFamily: 'Geist Mono, monospace', textAlign: 'right' }}>Mass</div>
+                <div style={{ flex: 1, height: 10, background: 'var(--brd)', borderRadius: 3, overflow: 'hidden' }}>
+                  <div style={{ width: `${(m.mass / max) * 100}%`, height: '100%', background: '#f97316', borderRadius: 3 }} />
+                </div>
+                <div style={{ width: 38, fontSize: 9, fontFamily: 'Geist Mono, monospace', color: 'var(--txt2)', textAlign: 'right' }}>{(m.mass * 100).toFixed(1)}%</div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+
 export default function ModelsPage() {
   const [, setLang] = useState('')
   useEffect(() => subscribeLang(setLang), [])
@@ -175,7 +256,7 @@ export default function ModelsPage() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 14 }}>
             <ChartFrame title={t('models.charts.testRocPr')} sub={t('models.charts.testRocPr.s')}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/test_roc_pr.png" alt="Test set ROC and PR curves"
+              <img src="/assets/calc_vs_mass.png" alt="Test set ROC and PR curves"
                 style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 6, filter: 'invert(0.92) hue-rotate(180deg) saturate(0.85) brightness(0.95)' }}
                 onError={e => { (e.target as HTMLImageElement).style.display = 'none' }}
               />
@@ -190,7 +271,7 @@ export default function ModelsPage() {
             <MetricBox value="76.2%"  label={t('models.metric.spec')}/>
             <MetricBox value="0.53"   label={t('models.metric.opThr')}/>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 14 }}>
+          <div style={{ marginTop: 14 }}>
             <ChartFrame title={t('models.charts.s2curves')} sub={t('models.charts.s2curves.s')}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/assets/stage2_curves.png" alt="Stage 2 training curves"
@@ -198,21 +279,10 @@ export default function ModelsPage() {
                 onError={e => { (e.target as HTMLImageElement).style.display = 'none' }}
               />
             </ChartFrame>
-            <ChartFrame title={t('models.charts.s2ft')} sub={t('models.charts.s2ft.s')}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/stage2_finetune_curves.png" alt="Stage 2 fine-tuning curves"
-                style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 6, filter: 'invert(0.92) hue-rotate(180deg) saturate(0.85) brightness(0.95)' }}
-                onError={e => { (e.target as HTMLImageElement).style.display = 'none' }}
-              />
-            </ChartFrame>
           </div>
           <div style={{ marginTop: 14 }}>
             <ChartFrame title={t('models.charts.calcMass')} sub={t('models.charts.calcMass.s')}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/calc_vs_mass.png" alt="Calcifications vs Masses"
-                style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 6 }}
-                onError={e => { (e.target as HTMLImageElement).style.display = 'none' }}
-              />
+              <CalcVsMassTable />
             </ChartFrame>
           </div>
         </div>

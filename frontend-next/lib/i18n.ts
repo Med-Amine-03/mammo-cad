@@ -309,8 +309,15 @@ const dict: Record<Lang, Record<string, string>> = {
 }
 
 // ── Client-side only (uses localStorage) ─────────────────────────────────
+
+// Hydration guard: during SSR and the very first client render we MUST return
+// DEFAULT_LANG so the HTML matches the server snapshot. After hydration, the
+// subscribeLang/useEffect cycle triggers a re-render with the real lang.
+let _hydrated = false
+
 export function getLang(): Lang {
   if (typeof window === 'undefined') return DEFAULT_LANG
+  if (!_hydrated) return DEFAULT_LANG
   return (localStorage.getItem(LS_LANG) as Lang) || DEFAULT_LANG
 }
 
@@ -329,6 +336,16 @@ const langListeners = new Set<(l: Lang) => void>()
 
 export function subscribeLang(fn: (l: Lang) => void): () => void {
   langListeners.add(fn)
+  // On first subscribe (mount), mark hydration complete and notify with the
+  // real language so the component re-renders with the user's preference.
+  if (!_hydrated) {
+    _hydrated = true
+    const real = (localStorage.getItem(LS_LANG) as Lang) || DEFAULT_LANG
+    if (real !== DEFAULT_LANG) {
+      // Schedule a micro-tick so React batches it after hydration
+      Promise.resolve().then(() => fn(real))
+    }
+  }
   return () => { langListeners.delete(fn) }
 }
 

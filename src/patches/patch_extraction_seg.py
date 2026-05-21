@@ -123,7 +123,7 @@ def main():
         print(f"  {split}/images: {len(imgs)} patches")
         print(f"  {split}/masks : {len(masks)} patches")
 
-    # Check all masks are positive
+    
     print(f"\nChecking all masks have MC pixels...")
     all_ok = True
     for split in ["all", "test"]:

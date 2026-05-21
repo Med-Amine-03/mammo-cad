@@ -108,7 +108,7 @@ code, .mono { font-family: 'Geist Mono', var(--font-geist-mono, ui-monospace), "
 
 /* ── Top nav ─────────────────────────────────────────── */
 .nav {
-  height: 56px;
+  height: 62px;
   display: flex;
   align-items: center;
   padding: 0 22px;

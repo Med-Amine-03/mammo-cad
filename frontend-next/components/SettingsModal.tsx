@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { t, getLang, setLang, subscribeLang } from '@/lib/i18n'
+import type { HealthStatus } from '@/lib/types'
 import { ApiSettings } from '@/lib/storage'
 import { Icon } from './Icons'
 
@@ -9,9 +10,10 @@ interface Props {
   open: boolean
   onClose: () => void
   onChange?: () => void
+  health?: HealthStatus | null
 }
 
-export default function SettingsModal({ open, onClose, onChange }: Props) {
+export default function SettingsModal({ open, onClose, onChange, health }: Props) {
   const [, setLangState] = useState('')
   useEffect(() => subscribeLang(setLangState), [])
 
@@ -79,6 +81,30 @@ export default function SettingsModal({ open, onClose, onChange }: Props) {
         </div>
 
         <SectionLabel>API</SectionLabel>
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 9,
+          padding: '8px 12px', borderRadius: 8,
+          background: 'var(--ab)', border: '1px solid var(--brd)',
+          marginBottom: 12,
+        }}>
+          <span className={
+            health?.status === 'ready' ? 'health-dot'
+            : health?.status === 'loading' ? 'health-dot loading'
+            : health?.status === 'offline' ? 'health-dot off'
+            : 'health-dot loading'
+          }/>
+          <span style={{ fontSize: 11.5, color: 'var(--txt2)', fontWeight: 500 }}>
+            {health?.status === 'ready' ? t('health.ready')
+            : health?.status === 'loading' ? t('health.loading')
+            : health?.status === 'offline' ? t('health.offline')
+            : t('health.connecting')}
+          </span>
+          {health?.device && (
+            <span style={{ marginLeft: 'auto', fontSize: 10, color: 'var(--txt3)', fontFamily: 'Geist Mono, monospace' }}>
+              {health.device}
+            </span>
+          )}
+        </div>
         <input
           className="input mono"
           value={apiBase}

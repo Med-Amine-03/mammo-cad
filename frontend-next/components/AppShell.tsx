@@ -76,7 +76,6 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         <TopNav
           page={page}
           onNavigate={navigate}
-          health={health}
           onOpenSettings={() => setSettingsOpen(true)}
           onToggleTheme={onToggleTheme}
           theme={theme}
@@ -93,6 +92,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         open={settingsOpen}
         onClose={() => setSettingsOpen(false)}
         onChange={onSettingsChange}
+        health={health}
       />
 
       {toast && (

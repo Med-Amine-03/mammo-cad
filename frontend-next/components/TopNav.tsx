@@ -1,6 +1,5 @@
 'use client'
 
-import type { HealthStatus } from '@/lib/types'
 import { t, subscribeLang } from '@/lib/i18n'
 import { Icon } from './Icons'
 import { useState, useEffect } from 'react'
@@ -8,13 +7,12 @@ import { useState, useEffect } from 'react'
 interface Props {
   page: string
   onNavigate: (path: string) => void
-  health: HealthStatus | null
   onOpenSettings: () => void
   onToggleTheme: () => void
   theme: 'dark' | 'light'
 }
 
-export default function TopNav({ page, onNavigate, health, onOpenSettings, onToggleTheme, theme }: Props) {
+export default function TopNav({ page, onNavigate, onOpenSettings, onToggleTheme, theme }: Props) {
   const [, setLang] = useState('')
   useEffect(() => subscribeLang(setLang), [])
 
@@ -24,13 +22,6 @@ export default function TopNav({ page, onNavigate, health, onOpenSettings, onTog
     { id: 'history', path: '/history', label: t('nav.history') },
     { id: 'models',  path: '/models',  label: t('nav.models') },
   ]
-
-  let dotClass = 'health-dot loading'
-  let label = t('health.checking')
-  if (health?.status === 'ready')   { dotClass = 'health-dot';         label = t('health.ready') }
-  else if (health?.status === 'loading') { dotClass = 'health-dot loading'; label = t('health.loading') }
-  else if (health?.status === 'offline') { dotClass = 'health-dot off';     label = t('health.offline') }
-  else if (!health)                  { dotClass = 'health-dot loading'; label = t('health.connecting') }
 
   return (
     <nav className="nav">
@@ -83,12 +74,12 @@ export default function TopNav({ page, onNavigate, health, onOpenSettings, onTog
 
       {/* Right tools */}
       <div className="nav-tools">
-        <div className="health" title={health?.device ? `Device: ${health.device}` : ''}>
-          <span className={dotClass}/>
-          <span>{label}</span>
-        </div>
         <button className="icon-btn" onClick={onOpenSettings} title={t('settings.title')}>
-          <Icon.Settings s={14}/>
+          <svg width={15} height={15} viewBox="0 0 15 15" fill="none">
+            <path d="M5.5 2v11M9.5 2v11" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+            <rect x="3.8" y="4.2" width="3.4" height="2.6" rx="1" fill="var(--bg2)" stroke="currentColor" strokeWidth="1.1"/>
+            <rect x="7.8" y="8.2" width="3.4" height="2.6" rx="1" fill="var(--bg2)" stroke="currentColor" strokeWidth="1.1"/>
+          </svg>
         </button>
         <button className="icon-btn" onClick={onToggleTheme} title={t('settings.theme.label')}>
           {theme === 'light' ? <Icon.Moon s={14}/> : <Icon.Sun s={14}/>}
