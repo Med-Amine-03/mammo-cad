@@ -3,7 +3,7 @@
 A 2-stage deep learning pipeline for automatic microcalcification detection and malignancy classification in digital mammograms.
 
 > **End-of-studies project (PFE), Licence in Software Engineering & Information Systems, FSM, carried out at the LATIS lab (ENISo), Jan–Jun 2026**  
-> Supervised by M. Karim Kalti
+> Supervised by Prof. Karim Kalti
 
 ---
 
@@ -64,7 +64,7 @@ Result             Annotated image · Grad-CAM · JSON report
 ### U-Net (segmentation)
 - 4-level encoder–decoder, bottleneck 1024 channels
 - Skip connections to preserve pixel-level detail
-- Loss: weighted BCE + Dice combo
+- Loss: top-k cross-entropy (hard negative mining, negative ratio 3)
 - 10-fold cross-validation, 300 epochs/fold
 - Inference: sliding window 256×256, stride 128, bilinear stitching
 
@@ -74,7 +74,7 @@ Result             Annotated image · Grad-CAM · JSON report
 - 2-stage training: Stage 1 (head only, 60 epochs) → Stage 2 (unfreeze blocks 5-7, 150 epochs)
 - SWA on last 20 epochs → better generalization
 - TTA-16: 16 augmented views averaged at inference (+0.019 AUC vs single view)
-- Fine-tuned from CBIS-DDSM → INbreast: AUC 0.41 → **0.62**
+- Full pipeline on INbreast (other scanner): AUC 0.41 → **0.62** after INbreast fine-tuning, FEBDS fallback and threshold calibration
 
 ### FEBDS fallback
 The FEBDS detector comes from the LATIS lab's `medical-image-std` framework (by Hamza Gbada); I integrated it into the pipeline, I did not develop it.
@@ -151,7 +151,7 @@ mammo-cad/
 │   ├── models/
 │   │   ├── unet.py                  U-Net architecture
 │   │   ├── efficientnet.py          EfficientNet-B3 + custom head
-│   │   └── losses.py                BCE, Dice, combo losses
+│   │   └── losses.py                Top-k cross-entropy loss + Dice, IoU, sensitivity metrics
 │   ├── training/
 │   │   ├── train_unet.py            10-fold CV training + SWA
 │   │   └── train_classifier.py      2-stage training, AdamW, MixUp
