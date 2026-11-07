@@ -2,7 +2,7 @@
 
 A 2-stage deep learning pipeline for automatic microcalcification detection and malignancy classification in digital mammograms.
 
-> **PFE — Master's thesis project, FSM / LARIS lab**  
+> **End-of-studies project (PFE), Licence in Software Engineering & Information Systems, FSM, carried out at the LATIS lab (ENISo), Jan–Jun 2026**  
 > Supervised by M. Karim Kalti
 
 ---
@@ -11,8 +11,9 @@ A 2-stage deep learning pipeline for automatic microcalcification detection and 
 
 | Stage | Model | Dataset | AUC-ROC | AUC-PR | Notes |
 |-------|-------|---------|---------|--------|-------|
-| Segmentation | U-Net (4-level) | INbreast | **0.9642** | **0.8009** | 10-fold CV, τ=0.45 |
-| Classification | EfficientNet-B3 | INbreast (fine-tuned) | **0.7812** | **0.7183** | TTA-16, SWA |
+| Segmentation | U-Net (4-level) | INbreast + CBIS-DDSM patches | **0.9642** | **0.8009** | 10-fold CV, τ=0.45 |
+| Classification | EfficientNet-B3 | CBIS-DDSM (test, n=787) | **0.7812** | **0.7183** | TTA-16, SWA · 95% CI 0.748–0.813 |
+| Full pipeline | U-Net + EfficientNet-B3 | INbreast (other scanner, 50 images) | **0.62** (from 0.41) | — | INbreast fine-tuning + threshold calibration + FEBDS fallback |
 
 ---
 
@@ -76,6 +77,7 @@ Result             Annotated image · Grad-CAM · JSON report
 - Fine-tuned from CBIS-DDSM → INbreast: AUC 0.41 → **0.62**
 
 ### FEBDS fallback
+The FEBDS detector comes from the LATIS lab's `medical-image-std` framework (by Hamza Gbada); I integrated it into the pipeline, I did not develop it.
 When U-Net detects no regions, a Difference-of-Gaussians (FEBDS) detector provides candidate regions, ensuring no image leaves the pipeline without output.
 
 ---
@@ -244,5 +246,5 @@ The Next.js frontend provides:
 
 ## License
 
-This project was developed as a Master's thesis (PFE) at FSM / LARIS lab.  
+This project was developed as an end-of-studies project (PFE) of the Licence at FSM, carried out at the LATIS lab (ENISo).  
 Medical images belong to their respective datasets — see INbreast and CBIS-DDSM licenses.
